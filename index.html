@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>АйТиРешение — ИТ-аутсорсинг и инфраструктура | Ростов-на-Дону</title>
+<meta name="description" content="Комплексное ИТ-обслуживание бизнеса в Ростовской области. Серверы, СКУД, видеонаблюдение, СКС, оптика — под ключ. 20 лет опыта. Бесплатный аудит.">
+<meta name="keywords" content="ИТ аутсорсинг Ростов, СКУД Ростов, видеонаблюдение Ростов, серверы под ключ, СКС монтаж Ростов, АйТиРешение">
+<meta property="og:title" content="АйТиРешение — ИТ-аутсорсинг | Ростов-на-Дону">
+<meta property="og:description" content="Один подрядчик для всей ИТ-инфраструктуры. 20 лет. SLA в договоре. Бесплатный аудит.">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Manrope:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#CC1515;--red2:#E02020;--rg:rgba(204,21,21,0.09);
+  --black:#111;--gray1:#F5F5F5;--gray2:#ECECEC;--gray3:#D4D4D4;
+  --muted:#888;--green:#15803d;
+  --mono:'JetBrains Mono',monospace;--sans:'Manrope',sans-serif;--r:8px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:#fff;color:var(--black);overflow-x:hidden;line-height:1.65}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+
+/* LOGO */
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-mark{width:40px;height:40px;background:var(--red);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-it{font-family:var(--mono);font-weight:700;font-size:17px;color:#fff;letter-spacing:-1px}
+.logo-text{display:flex;flex-direction:column;gap:1px}
+.logo-name{font-family:var(--sans);font-weight:800;font-size:18px;color:var(--black);letter-spacing:-0.4px;line-height:1}
+.logo-name span{color:var(--red)}
+.logo-sub{font-family:var(--mono);font-size:7.5px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--gray2);transition:border-color 0.3s}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:66px;max-width:1160px;margin:0 auto;padding:0 28px}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--black)}
+.nav-cta{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:var(--red);color:#fff!important;padding:10px 18px;border-radius:var(--r);text-decoration:none;transition:background 0.2s,transform 0.15s;white-space:nowrap}
+.nav-cta:hover{background:var(--red2);transform:translateY(-1px)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.burger span{width:22px;height:2px;background:var(--black);border-radius:2px;display:block}
+
+/* HERO */
+#hero{min-height:100vh;background:#fff;display:flex;align-items:center;padding:106px 0 72px;position:relative;overflow:hidden}
+#hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(204,21,21,0.11) 1px,transparent 1px);background-size:36px 36px;mask-image:radial-gradient(ellipse 60% 60% at 72% 38%,black 5%,transparent 72%)}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;margin-bottom:22px}
+.eyebrow-sq{width:8px;height:8px;background:var(--red);border-radius:2px;flex-shrink:0}
+.eyebrow-txt{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--red)}
+h1{font-size:clamp(32px,4vw,56px);font-weight:900;line-height:1.07;letter-spacing:-0.03em;margin-bottom:20px;color:var(--black)}
+h1 em{font-style:normal;color:var(--red)}
+.hero-desc{font-size:16px;color:var(--muted);line-height:1.8;max-width:450px;margin-bottom:36px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:44px}
+.btn-red{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:14px 24px;border-radius:var(--r);text-decoration:none;border:none;cursor:pointer;transition:background 0.2s,transform 0.15s}
+.btn-red:hover{background:var(--red2);transform:translateY(-2px)}
+.btn-out{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--black);font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:14px 24px;border-radius:var(--r);text-decoration:none;border:1.5px solid var(--gray3);cursor:pointer;transition:border-color 0.2s,background 0.2s}
+.btn-out:hover{border-color:var(--black);background:var(--gray1)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--gray3);border:1px solid var(--gray3);border-radius:var(--r);overflow:hidden}
+.stat{padding:16px 10px;background:#fff;text-align:center}
+.stat-n{font-family:var(--mono);font-size:24px;font-weight:700;color:var(--red);line-height:1;margin-bottom:5px}
+.stat-l{font-size:11px;color:var(--muted);line-height:1.35}
+.hero-right{display:flex;align-items:center;justify-content:center}
+.hero-mark{width:280px;height:280px;background:var(--red);border-radius:18px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 20px 60px rgba(204,21,21,0.22)}
+.hero-mark-it{font-family:var(--mono);font-weight:700;font-size:112px;color:#fff;letter-spacing:-6px}
+
+/* SECTION */
+.sec-lbl{display:inline-flex;align-items:center;gap:8px;margin-bottom:14px}
+.sec-lbl-sq{width:9px;height:9px;background:var(--red);border-radius:2px}
+.sec-lbl-txt{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--red)}
+h2{font-size:clamp(22px,3vw,40px);font-weight:900;line-height:1.1;letter-spacing:-0.02em;margin-bottom:12px;color:var(--black)}
+h2 em{font-style:normal;color:var(--red)}
+.sec-desc{font-size:15px;color:var(--muted);max-width:540px;margin-bottom:44px;line-height:1.75}
+section{padding:80px 0}
+section:nth-child(even){background:var(--gray1)}
+
+/* PAIN */
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gray3);border-radius:14px;overflow:hidden;margin-bottom:40px}
+.pain-card{background:#fff;padding:28px 24px;transition:background 0.18s}
+.pain-card:hover{background:#fff5f5}
+.pain-n{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.18em;color:var(--red);margin-bottom:12px}
+.pain-card h3{font-size:15px;font-weight:700;margin-bottom:9px;line-height:1.35;color:var(--black)}
+.pain-card p{font-size:13px;color:var(--muted);line-height:1.75}
+.pill{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;background:var(--rg);color:var(--red);border:1px solid rgba(204,21,21,0.2);padding:3px 9px;border-radius:4px}
+.compare{border:1px solid var(--gray3);border-radius:14px;overflow:hidden}
+.cmp-head{display:grid;grid-template-columns:2fr 1fr 1fr;background:var(--red);padding:14px 24px;gap:12px}
+.cmp-head div{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.65)}
+.cmp-head .us{color:#fff}
+.cmp-row{display:grid;grid-template-columns:2fr 1fr 1fr;padding:13px 24px;gap:12px;border-bottom:1px solid var(--gray2);align-items:center;transition:background 0.15s}
+.cmp-row:last-child{border-bottom:none}
+.cmp-row:hover{background:var(--gray1)}
+.cmp-row .p{font-size:13px;font-weight:600;color:var(--black)}
+.bad{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:5px}
+.bad::before{content:'✕';color:#E24B4A;font-weight:700;font-size:11px}
+.good{font-size:12px;color:var(--green);font-weight:600;display:flex;align-items:center;gap:5px}
+.good::before{content:'✓';font-weight:700;font-size:11px}
+
+/* SERVICES */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gray3);border-radius:14px;overflow:hidden}
+.svc{background:#fff;padding:30px 24px;transition:background 0.18s}
+.svc:hover{background:var(--gray1)}
+.svc.hot{background:var(--red)}
+.svc-n{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.2em;color:var(--red);margin-bottom:16px;display:block}
+.svc.hot .svc-n{color:rgba(255,255,255,0.55)}
+.svc h3{font-size:16px;font-weight:700;margin-bottom:8px;line-height:1.25;color:var(--black)}
+.svc.hot h3{color:#fff}
+.svc p{font-size:13px;color:var(--muted);line-height:1.75}
+.svc.hot p{color:rgba(255,255,255,0.78)}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px}
+.tag{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:3px 8px;border-radius:3px;background:var(--gray1);color:var(--muted);border:1px solid var(--gray3)}
+.svc.hot .tag{background:rgba(255,255,255,0.18);color:rgba(255,255,255,0.9);border-color:transparent}
+
+/* PRICING */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.price-card{border:1px solid var(--gray3);border-radius:14px;overflow:hidden;transition:box-shadow 0.2s,transform 0.2s}
+.price-card:hover{box-shadow:0 8px 32px rgba(0,0,0,0.08);transform:translateY(-3px)}
+.price-card.best{border:2px solid var(--red)}
+.price-top{padding:24px 24px 20px;background:var(--gray1)}
+.price-card.best .price-top{background:var(--red)}
+.price-badge{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.price-card.best .price-badge{color:rgba(255,255,255,0.7)}
+.price-name{font-size:20px;font-weight:800;color:var(--black);margin-bottom:6px}
+.price-card.best .price-name{color:#fff}
+.price-desc{font-size:12px;color:var(--muted);line-height:1.6}
+.price-card.best .price-desc{color:rgba(255,255,255,0.75)}
+.price-amt{font-family:var(--mono);font-size:28px;font-weight:700;color:var(--red);margin:16px 0 4px}
+.price-card.best .price-amt{color:#fff}
+.price-per{font-size:11px;color:var(--muted)}
+.price-card.best .price-per{color:rgba(255,255,255,0.6)}
+.price-body{padding:20px 24px}
+.price-feat{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+.price-feat li{font-size:13px;color:var(--muted);display:flex;align-items:flex-start;gap:8px;line-height:1.5}
+.price-feat li::before{content:'✓';color:var(--green);font-weight:700;font-size:12px;flex-shrink:0;margin-top:1px}
+.price-btn{display:block;text-align:center;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:12px;border-radius:var(--r);text-decoration:none;transition:all 0.2s;border:1.5px solid var(--gray3);color:var(--black)}
+.price-btn:hover{border-color:var(--red);color:var(--red)}
+.price-card.best .price-btn{background:var(--black);color:#fff;border-color:var(--black)}
+.price-card.best .price-btn:hover{background:var(--red);border-color:var(--red)}
+.price-note{text-align:center;font-size:12px;color:var(--muted);margin-top:20px}
+
+/* WHY */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gray3);border-radius:14px;overflow:hidden}
+.why-c{background:var(--gray1);padding:28px 24px;transition:background 0.18s}
+.why-c:hover{background:#fff0f0}
+.why-ic{width:36px;height:36px;background:var(--rg);border:1px solid rgba(204,21,21,0.15);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:15px;margin-bottom:14px}
+.why-c h3{font-size:14px;font-weight:700;margin-bottom:7px;line-height:1.35;color:var(--black)}
+.why-c p{font-size:13px;color:var(--muted);line-height:1.7}
+
+/* HOW */
+.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative}
+.steps::before{content:'';position:absolute;top:21px;left:7%;right:7%;height:1px;background:linear-gradient(90deg,var(--red),rgba(204,21,21,0.07))}
+.step{text-align:center;padding:0 8px;position:relative;z-index:1}
+.step-sq{width:42px;height:42px;background:var(--red);border-radius:6px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-family:var(--mono);font-weight:700;font-size:15px;color:#fff;border:3px solid #fff;outline:1px solid var(--gray3);transition:transform 0.2s}
+.step:hover .step-sq{transform:scale(1.1)}
+.step h4{font-size:12px;font-weight:700;margin-bottom:5px;color:var(--black)}
+.step p{font-size:11px;color:var(--muted);line-height:1.6}
+
+/* CASES */
+.cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gray3);border-radius:14px;overflow:hidden}
+.case{background:#fff;overflow:hidden;transition:background 0.18s}
+.case:hover{background:#fff5f5}
+.case-top{background:var(--red);padding:18px 20px;display:flex;align-items:center;gap:12px}
+.case-ic{width:36px;height:36px;background:rgba(255,255,255,0.18);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.case-top h3{font-size:14px;font-weight:700;color:#fff;line-height:1.25}
+.case-top p{font-size:10px;color:rgba(255,255,255,0.6);margin-top:2px;font-family:var(--mono)}
+.case-body{padding:20px}
+.case-item{display:flex;gap:9px;margin-bottom:10px;align-items:flex-start}
+.c-lbl{font-family:var(--mono);font-size:8px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;background:var(--rg);color:var(--red);border:1px solid rgba(204,21,21,0.18);padding:3px 7px;border-radius:3px;white-space:nowrap;flex-shrink:0;margin-top:1px}
+.case-item p{font-size:12px;color:var(--muted);line-height:1.65}
+.case-res{margin-top:13px;padding:10px 13px;background:rgba(21,128,61,0.07);border:1px solid rgba(21,128,61,0.2);border-radius:6px;font-family:var(--mono);font-size:10px;font-weight:700;color:var(--green)}
+
+/* FAQ */
+.faq{max-width:760px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--gray2)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 0;cursor:pointer;gap:16px}
+.faq-q h3{font-size:15px;font-weight:700;color:var(--black);line-height:1.35}
+.faq-arrow{width:28px;height:28px;background:var(--rg);border:1px solid rgba(204,21,21,0.18);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;font-weight:300;transition:transform 0.25s,background 0.2s;color:var(--red)}
+.faq-item.open .faq-arrow{transform:rotate(45deg);background:var(--red);color:#fff;border-color:var(--red)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+.faq-a p{font-size:14px;color:var(--muted);line-height:1.8;padding-bottom:18px}
+.faq-item.open .faq-a{max-height:300px}
+
+/* CONTACT */
+#contact{background:var(--black)}
+#contact h2{color:#fff}
+#contact h2 em{color:var(--red)}
+#contact .sec-lbl-txt{color:var(--red)}
+#contact .sec-desc{color:rgba(255,255,255,0.45)}
+.form-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.form-contacts{display:flex;flex-direction:column;gap:18px;margin-top:32px}
+.fc{display:flex;align-items:center;gap:12px;text-decoration:none;color:rgba(255,255,255,0.75);transition:color 0.2s}
+.fc:hover{color:#fff}
+.fc-ic{width:36px;height:36px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+.fc-txt{display:flex;flex-direction:column;gap:2px}
+.fc-lbl{font-family:var(--mono);font-size:8px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.3)}
+.fc-val{font-size:14px;font-weight:600}
+.form{display:flex;flex-direction:column;gap:14px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.f-group{display:flex;flex-direction:column;gap:6px}
+.f-group label{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.35)}
+.f-group input,.f-group select,.f-group textarea{font-family:var(--sans);font-size:14px;color:#fff;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:var(--r);padding:12px 14px;outline:none;transition:border-color 0.2s,background 0.2s;width:100%}
+.f-group input:focus,.f-group select:focus,.f-group textarea:focus{border-color:var(--red);background:rgba(255,255,255,0.09)}
+.f-group select option{background:#222;color:#fff}
+.f-group textarea{resize:vertical;min-height:88px}
+.f-group input::placeholder,.f-group textarea::placeholder{color:rgba(255,255,255,0.22)}
+.form-submit{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:4px}
+.btn-submit{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:var(--red);color:#fff;border:none;padding:14px 28px;border-radius:var(--r);cursor:pointer;transition:background 0.2s,transform 0.15s}
+.btn-submit:hover{background:var(--red2);transform:translateY(-2px)}
+.form-note{font-size:11px;color:rgba(255,255,255,0.28);line-height:1.5}
+.form-ok{display:none;background:rgba(21,128,61,0.15);border:1px solid rgba(21,128,61,0.35);border-radius:var(--r);padding:14px 18px;font-size:14px;color:#4ade80;font-weight:600}
+
+/* FOOTER */
+footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
+.foot-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;margin-bottom:24px}
+.foot-logo .logo-name{color:#fff}
+.foot-logo .logo-sub{color:#555}
+.foot-links{display:flex;gap:24px;flex-wrap:wrap}
+.foot-links a{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#444;text-decoration:none;transition:color 0.2s}
+.foot-links a:hover{color:#aaa}
+.foot-copy{font-family:var(--mono);font-size:10px;color:#333;letter-spacing:0.08em;text-align:center}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(22px);transition:opacity 0.55s ease,transform 0.55s ease}
+.rv.on{opacity:1;transform:translateY(0)}
+
+/* CALCULATOR */
+#calc{background:var(--black)}
+#calc h2{color:#fff}
+#calc h2 em{color:var(--red)}
+#calc .sec-lbl-txt{color:var(--red)}
+#calc .sec-desc{color:rgba(255,255,255,0.45)}
+.calc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.calc-form{display:flex;flex-direction:column;gap:22px}
+.calc-group{display:flex;flex-direction:column;gap:8px}
+.calc-label{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.4);display:flex;justify-content:space-between;align-items:center}
+.calc-label span{color:#fff;font-size:11px;letter-spacing:0}
+.calc-slider{-webkit-appearance:none;appearance:none;width:100%;height:4px;border-radius:2px;background:rgba(255,255,255,0.12);outline:none;cursor:pointer}
+.calc-slider::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--red);cursor:pointer;border:3px solid #111;box-shadow:0 0 0 1px var(--red)}
+.calc-slider::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--red);cursor:pointer;border:3px solid #111}
+.calc-checks{display:flex;flex-wrap:wrap;gap:8px}
+.calc-check{display:flex;align-items:center;gap:7px;cursor:pointer}
+.calc-check input{display:none}
+.calc-chip{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:6px 12px;border-radius:5px;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.5);background:transparent;transition:all 0.18s;cursor:pointer;user-select:none}
+.calc-check input:checked + .calc-chip{background:var(--red);border-color:var(--red);color:#fff}
+.calc-result{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:20px;position:sticky;top:86px}
+.calc-result-title{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:4px}
+.calc-price-main{display:flex;flex-direction:column;gap:4px}
+.calc-price-num{font-family:var(--mono);font-size:42px;font-weight:700;color:var(--red);line-height:1}
+.calc-price-per{font-size:13px;color:rgba(255,255,255,0.4)}
+.calc-divider{height:1px;background:rgba(255,255,255,0.08)}
+.calc-breakdown{display:flex;flex-direction:column;gap:10px}
+.calc-row{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.calc-row-label{font-size:12px;color:rgba(255,255,255,0.5)}
+.calc-row-val{font-family:var(--mono);font-size:12px;font-weight:700;color:rgba(255,255,255,0.8)}
+.calc-row-val.accent{color:var(--red)}
+.calc-saving{background:rgba(21,128,61,0.12);border:1px solid rgba(21,128,61,0.25);border-radius:8px;padding:14px 16px;display:flex;align-items:center;gap:10px}
+.calc-saving-icon{font-size:18px;flex-shrink:0}
+.calc-saving p{font-size:12px;color:rgba(255,255,255,0.65);line-height:1.6}
+.calc-saving strong{color:#4ade80}
+.calc-cta-btn{display:block;text-align:center;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:14px;border-radius:var(--r);background:var(--red);color:#fff;text-decoration:none;border:none;cursor:pointer;transition:background 0.2s,transform 0.15s;width:100%}
+.calc-cta-btn:hover{background:var(--red2);transform:translateY(-2px)}
+
+/* VENDORS */
+#vendors{background:var(--gray1)}
+.vendors-intro{max-width:600px;margin-bottom:44px}
+.vendors-cats{display:flex;flex-direction:column;gap:28px}
+.vcat-title{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;display:flex;align-items:center;gap:9px}
+.vcat-title::after{content:'';flex:1;height:1px;background:var(--gray3)}
+.vcat-logos{display:flex;flex-wrap:wrap;gap:8px}
+.vlogo{display:flex;align-items:center;justify-content:center;padding:9px 18px;background:#fff;border:1px solid var(--gray2);border-radius:7px;font-family:var(--mono);font-size:12px;font-weight:700;color:var(--black);letter-spacing:-0.3px;transition:border-color 0.2s,background 0.2s}
+.vlogo:hover{border-color:var(--red);color:var(--red)}
+
+/* MOBILE */
+@media(max-width:920px){
+  .nav-links{display:none}.burger{display:flex}
+  .hero-in{grid-template-columns:1fr}.hero-right{display:none}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .pain-grid,.svc-grid,.why-grid,.cases-grid,.price-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(2,1fr)}.steps::before{display:none}
+  .cmp-head,.cmp-row{grid-template-columns:1.3fr 1fr 1fr}
+  .form-wrap,.calc-wrap{grid-template-columns:1fr}.f-row{grid-template-columns:1fr}
+  .calc-result{position:static}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-in">
+    <a href="#" class="logo">
+      <div class="logo-mark"><div class="logo-it">IT</div></div>
+      <div class="logo-text">
+        <div class="logo-name"><span>АйТи</span>Решение</div>
+        <div class="logo-sub">Аутсорсинг · Ростов-на-Дону</div>
+      </div>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#pain">Проблемы</a></li>
+      <li><a href="#services">Услуги</a></li>
+      <li><a href="#pricing">Тарифы</a></li>
+      <li><a href="#cases">Кейсы</a></li>
+      <li><a href="#calc">Калькулятор</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="nav-cta">Бесплатный аудит</a></li>
+    </ul>
+    <button class="burger" onclick="toggleNav()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="wrap">
+    <div class="hero-in">
+      <div>
+        <div class="eyebrow rv"><div class="eyebrow-sq"></div><div class="eyebrow-txt">Ростовская область · 20 лет на рынке</div></div>
+        <h1 class="rv">ИТ-инфраструктура<br>для бизнеса —<br><em>под ключ, в срок</em></h1>
+        <p class="hero-desc rv">Аутсорсинг, серверы, видеонаблюдение, СКУД, СКС и оптика — один подрядчик для всех задач. Вы занимаетесь бизнесом — мы остальным.</p>
+        <div class="hero-btns rv">
+          <a href="#contact" class="btn-red">🎯 Бесплатный аудит</a>
+          <a href="#services" class="btn-out">→ Наши услуги</a>
+        </div>
+        <div class="stats rv">
+          <div class="stat"><div class="stat-n">20+</div><div class="stat-l">лет на рынке</div></div>
+          <div class="stat"><div class="stat-n">200+</div><div class="stat-l">объектов сдано</div></div>
+          <div class="stat"><div class="stat-n">15 мин</div><div class="stat-l">реакция удалённо</div></div>
+          <div class="stat"><div class="stat-n">1</div><div class="stat-l">подрядчик на всё</div></div>
+        </div>
+      </div>
+      <div class="hero-right rv">
+        <div class="hero-mark"><div class="hero-mark-it">IT</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- БОЛИ -->
+<section id="pain">
+  <div class="wrap">
+    <div class="rv">
+      <div class="sec-lbl"><div class="sec-lbl-sq"></div><div class="sec-lbl-txt">Боли бизнеса</div></div>
+      <h2>Узнаёте <em>себя?</em></h2>
+      <p class="sec-desc">Большинство руководителей сталкиваются с этим каждый день. Мы знаем, как исправить.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card rv">
+        <div class="pain-n">01 / РАСХОДЫ</div>
+        <h3>Сотрудник стоит в 2 раза дороже, чем кажется</h3>
+        <p>Зарплата 80 000 ₽ «на руки» — только начало. Налоги и взносы +43%, отпускные, больничные, найм нового при увольнении. Итого: <strong>от 130 000 ₽/мес</strong> за одного специалиста с ограниченными компетенциями.</p>
+        <span class="pill">Реальная стоимость: от 130 000 ₽</span>
+      </div>
+      <div class="pain-card rv">
+        <div class="pain-n">02 / ОТВЕТСТВЕННОСТЬ</div>
+        <h3>С сотрудника нечего спросить</h3>
+        <p>Сделал медленно — получит зарплату. Уволился — пароли и документация исчезли. С нами вы работаете по договору: сроки, SLA и юридическая ответственность закреплены письменно.</p>
+        <span class="pill">Юридическая ответственность</span>
+      </div>
+      <div class="pain-card rv">
+        <div class="pain-n">03 / ДОСТУПНОСТЬ</div>
+        <h3>Заболел, ушёл в отпуск — бизнес встал</h3>
+        <p>Когда единственный ИТ-человек недоступен — вы беззащитны. У нас команда: специалисты взаимозаменяемы, работа не останавливается ни на час в любой день.</p>
+        <span class="pill">Команда 24/7, без больничных</span>
+      </div>
+      <div class="pain-card rv">
+        <div class="pain-n">04 / КОМПЕТЕНЦИИ</div>
+        <h3>Один человек не может знать всё</h3>
+        <p>Серверы, сети, оптика, СКУД, видеонаблюдение, ИБ, резервное копирование — ни один штатный специалист не закроет всё это на высоком уровне. Нужна команда.</p>
+        <span class="pill">Нужна команда специалистов</span>
+      </div>
+      <div class="pain-card rv">
+        <div class="pain-n">05 / КРИЗИС</div>
+        <h3>Режете расходы, но ИТ не останавливается</h3>
+        <p>Компании сокращают штат — ИТ-специалисты первые в очереди. Но инфраструктура требует постоянного обслуживания. Аутсорсинг <strong>снижает расходы на 30–40%</strong> без потери качества.</p>
+        <span class="pill">Экономия 30–40% vs штат</span>
+      </div>
+      <div class="pain-card rv">
+        <div class="pain-n">06 / ЗООПАРК</div>
+        <h3>Пять подрядчиков — никто ни за что не отвечает</h3>
+        <p>Один монтирует кабели, другой ставит камеры, третий настраивает сервер. Когда что-то ломается — каждый кивает на другого. <strong>Один договор — весь объём.</strong></p>
+        <span class="pill">Один договор на всё</span>
+      </div>
+    </div>
+    <div class="rv" style="margin-top:40px">
+      <div class="sec-lbl"><div class="sec-lbl-sq"></div><div class="sec-lbl-txt">Сравнение</div></div>
+      <h2 style="margin-bottom:24px">Штат <em>vs</em> АйТиРешение</h2>
+      <div class="compare">
+        <div class="cmp-head"><div>Параметр</div><div>Штатный сотрудник</div><div class="us">✦ АйТиРешение</div></div>
+        <div class="cmp-row"><div class="p">Реальная стоимость</div><div class="bad">от 130 000 ₽/мес</div><div class="good">Фиксированная абонплата</div></div>
+        <div class="cmp-row"><div class="p">Налоги +43%</div><div class="bad">Ваша забота</div><div class="good">Наша проблема</div></div>
+        <div class="cmp-row"><div class="p">Болезнь / отпуск</div><div class="bad">Бизнес стоит</div><div class="good">Выходит замена</div></div>
+        <div class="cmp-row"><div class="p">Компетенции</div><div class="bad">Один профиль</div><div class="good">Команда специалистов</div></div>
+        <div class="cmp-row"><div class="p">Юридическая ответственность</div><div class="bad">Только выговор</div><div class="good">Прописана в договоре</div></div>
+        <div class="cmp-row"><div class="p">Время реакции</div><div class="bad">Как успеет</div><div class="good">SLA в договоре</div></div>
+        <div class="cmp-row"><div class="p">Риск при увольнении</div><div class="bad">Потеря паролей и знаний</div><div class="good">Документация остаётся у вас</div></div>
+        <div class="cmp-row"><div class="p">Сложные комплексные проекты</div><div class="bad">Нет опыта</div><div class="good">Реализованные кейсы</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- УСЛУГИ -->
+<section id="services">
+  <div class="wrap">
+    <div class="rv">
+      <div class="sec-lbl"><div class="sec-lbl-sq"></div><div class="sec-lbl-txt">Услуги</div></div>
+      <h2>Всё в <em>одном месте</em></h2>
+      <p class="sec-desc">Полный спектр ИТ-услуг под одной крышей — один подрядчик, один договор, один ответственный.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc hot rv">
+        <span class="svc-n">01</span>
+        <h3>ИТ-аутсорсинг инфраструктуры</h3>
+        <p>Берём всю ИТ-инфраструктуру на обслуживание. Фиксированная сумма в месяц — мы отвечаем за всё. Без внезапных расходов, без простоев, с SLA в договоре.</p>
+        <div class="tags"><span class="tag">Абонентское обслуживание</span><span class="tag">SLA-договор</span><span class="tag">Helpdesk</span></div>
+      </div>
+      <div class="svc rv">
+        <span class="svc-n">02</span>
+        <h3>Серверы и системы хранения данных</h3>
+        <p>Проектируем, поставляем и настраиваем серверную инфраструктуру. От небольшой серверной до полноценного дата-центра с резервированием и виртуализацией.</p>
+        <div class="tags"><span class="tag">Серверные</span><span class="tag">СХД</span><span class="tag">Виртуализация</span><span class="tag">Резервирование</span></div>
+      </div>
+      <div class="svc rv">
+        <span class="svc-n">03</span>
+        <h3>Слаботочные системы</h3>
+        <p>Структурированные кабельные сети, видеонаблюдение, СКУД, контроль доступа и учёт рабочего времени. Проектируем → монтируем → сдаём → обслуживаем.</p>
+        <div class="tags"><span class="tag">СКУД</span><span class="tag">Видеонаблюдение</span><span class="tag">СКС</span><span class="tag">УРВ</span></div>
+      </div>
+      <div class="svc rv">
+        <span class="svc-n">04</span>
+        <h3>Оптоволокно и беспроводные сети</h3>
+        <p>Прокладка оптики между зданиями и объектами любой протяжённости. Проектирование и монтаж корпоративного Wi-Fi — от офиса до склада и производства.</p>
+        <div class="tags"><span class="tag">Оптоволокно</span><span class="tag">Wi-Fi</span><span class="tag">Корпоративные сети</span></div>
+      </div>
+      <div class="svc rv">
+        <span class="svc-n">05</span>
+        <h3>Комплексные проекты с нуля</h3>
+        <p>КПП, серверные, ЦОД, охранные периметры — объекты любой сложности. Один договор, один ответственный, полный цикл от проектирования до сдачи под ключ.</p>
+        <div class="tags"><span class="tag">КПП</span><span class="tag">Дата-центры</span><span class="tag">Под ключ</span></div>
+      </div>
+      <div class="svc rv">
+        <span class="svc-n">06</span>
+        <h3>Интеграция систем</h3>
+        <p>СКУД + видеонаблюдение + 1С + учёт рабочего времени — в едином интерфейсе. Разрозненные системы объединяем в единую управляемую среду без дублирования данных.</p>
+        <div class="tags"><span class="tag">Интеграция</span><span class="tag">1С</span><span class="tag">Автоматизация</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ТАРИФЫ -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="rv" style="text-align:center">
+      <div class="sec-lbl" style="justify-content:center"><div class="sec-lbl-sq"></div><div class="sec-lbl-txt">Тарифы аутсорсинга</div></div>
+      <h2>Прозрачные <em>цены</em></h2>
+      <p class="sec-desc" style="margin:0 auto 44px;text-align:center">Фиксированная стоимость в месяц — никаких скрытых платежей. Точная сумма рассчитывается после бесплатного аудита вашей инфраструктуры.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card rv">
+        <div class="price-top">
+          <div class="price-badge">Стартовый</div>
+          <div class="price-name">Базовый</div>
+          <div class="price-desc">До 15 рабочих мест. Малый бизнес, торговые точки, небольшие офисы.</div>
+          <div class="price-amt">от 12 000 ₽</div>
+          <div class="price-per">в месяц, фиксировано</div>
+        </div>
+        <div class="price-body">
+          <ul class="price-feat">
+            <li>Удалённая техподдержка пользователей</li>
+            <li>Обслуживание компьютеров и оргтехники</li>
+            <li>Настройка и обновление программного обеспечения</li>
+            <li>Мониторинг сети и серверов</li>
+            <li>Реакция на инциденты до 4 часов</li>
+            <li>Ежемесячный отчёт о состоянии ИТ</li>
+          </ul>
+          <a href="#contact" class="price-btn">Оставить заявку</a>
+        </div>
+      </div>
+      <div class="price-card best rv">
+        <div class="price-top">
+          <div class="price-badge">Популярный выбор</div>
+          <div class="price-name">Бизнес</div>
+          <div class="price-desc">15–50 рабочих мест. Средний бизнес, производство, сеть офисов.</div>
+          <div class="price-amt">от 28 000 ₽</div>
+          <div class="price-per">в месяц, фиксировано</div>
+        </div>
+        <div class="price-body">
+          <ul class="price-feat">
+            <li>Всё из тарифа «Базовый»</li>
+            <li>Выезд инженера на объект — 2 визита в месяц</li>
+            <li>Администрирование серверов и СХД</li>
+            <li>Обслуживание сетевого оборудования</li>
+            <li>Резервное копирование данных</li>
+            <li>Реакция на инциденты до 1 часа</li>
+            <li>Приоритетная линия техподдержки</li>
+          </ul>
+          <a href="#contact" class="price-btn">Оставить заявку</a>
+        </div>
+      </div>
+      <div class="price-card rv">
+        <div class="price-top">
+          <div class="price-badge">Корпоративный</div>
+          <div class="price-name">Премиум</div>
+          <div class="price-desc">От 50 рабочих мест. Крупный бизнес, несколько объектов.</div>
+          <div class="price-amt">от 55 000 ₽</div>
+          <div class="price-per">в месяц, фиксировано</div>
+        </div>
+        <div class="price-body">
+          <ul class="price-feat">
+            <li>Всё из тарифа «Бизнес»</li>
+            <li>Выделенный инженер, неограниченные выезды</li>
+            <li>Обслуживание СКУД и видеонаблюдения</li>
+            <li>SLA: реакция 15 минут удалённо</li>
+            <li>Стратегическое ИТ-планирование</li>
+            <li>Скидка 15% на закупку оборудования</li>
+            <li>Приоритетная поддержка 24/7</li>
+          </ul>
+          <a href="#contact" class="price-btn">Оставить заявку</a>
+        </div>
+      </div>
+    </div>
+    <p class="price-note rv">Цены ориентировочные. Точная стоимость — после бесплатного аудита. <a href="#contact" style="color:var(--red)">Оставить заявку →</a></p>
+  </div>
+</section>
+
+<!-- ПОЧЕМУ МЫ -->
+<section id="why">
+  <div class="wrap">
+    <div class="rv">
+      <div class="sec-lbl"><div class="sec-lbl-sq"></div><div class="sec-lbl-txt">Почему мы</div></div>
+      <h2>Выбирают и <em>не меняют</em></h2>
+      <p class="sec-desc">20 лет в деле, сотни сданных объектов — ни одного невыполненного обязательства.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-c rv"><div class="why-ic">🏆</div><h3>20 лет на рынке Ростовской области</h3><p>Работаем с 2004 года. Нас не пугают нестандартные задачи — у нас есть опыт решения самых сложных ситуаций в регионе.</p></div>
+      <div class="why-c rv"><div class="why-ic">👷</div><h3>Только собственные инженеры</h3><p>Никаких субподрядчиков. Наши штатные сертифицированные специалисты с подтверждёнными компетенциями и нашей репутацией.</p></div>
+      <div class="why-c rv"><div class="why-ic">🔗</div><h3>Один подрядчик — вся инфраструктура</h3><p>Не нужно координировать несколько компаний. Весь периметр ИТ и слаботочных систем — наша ответственность по единому договору.</p></div>
+      <div class="why-c rv"><div class="why-ic">⚡</div><h3>Скорость реакции по SLA</h3><p>Удалённое подключение — 15 минут. Выезд по Ростову и области — в течение 2 часов. Сроки прописаны в договоре и не меняются.</p></div>
+      <div class="why-c rv"><div class="why-ic">📋</div><h3>Фиксированные цены в договоре</h3><p>Никаких «это отдельная работа» и «у нас изменились расценки». Стоимость и объём прописаны заранее — без сюрпризов и доплат.</p></div>
+      <div class="why-c rv"><div class="why-ic">🏗️</div><h3>Реальные сданные объекты</h3><p>КПП, ЦОД, серверные, системы доступа — не теория, а реализованные проекты с измеримыми результатами и довольными клиентами.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- КАК РАБОТАЕМ -->
+<section id="how">
+  <div class="wrap">
+    <div class="rv" style="text-align:center;margin-bottom:56px">
+      <div class="sec-lbl" style="justify-content:center"><div class="sec-lbl-sq"></div><div class="sec-lbl-txt">Процесс работы</div></div>
+      <h2>Просто. Прозрачно. <em>Предсказуемо.</em></h2>
+      <p class="sec-desc" style="margin:0 auto;text-align:center">Чёткий процесс, отточенный за 20 лет работы с бизнесом.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div class="step-sq">1</div><h4>Заявка</h4><p>Звоните или пишете. Отвечаем за 15 минут в рабочее время.</p></div>
+      <div class="step rv"><div class="step-sq">2</div><h4>Аудит</h4><p>Инженер выезжает бесплатно, оценивает инфраструктуру.</p></div>
+      <div class="step rv"><div class="step-sq">3</div><h4>ТЗ и КП</h4><p>Детальное предложение с конкретными цифрами и сроками.</p></div>
+      <div class="step rv"><div class="step-sq">4</div><h4>Договор</h4><p>Фиксируем объём, сроки и стоимость. Всё прозрачно.</p></div>
+      <div class="step rv"><div class="step-sq">5</div><h4>Реализация</h4><p>Выполняем работы с отчётами на каждом этапе.</p></div>
+      <div class="step rv"><div class="step-sq">6</div><h4>Поддержка</h4><p>Сдаём объект и обеспечиваем дальнейшее сопровождение.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- КЕЙСЫ -->
+<section id="cases">
+  <div class="wrap">
+    <div class="rv">
+      <div class="sec-lbl"><div class="sec-lbl-sq"></div><div class="sec-lbl-txt">Кейсы</div></div>
+      <h2>Проекты, которыми <em>гордимся</em></h2>
+      <p class="sec-desc">Реальные задачи — реальные результаты с измеримым эффектом для бизнеса.</p>
+    </div>
+    <div class="cases-grid">
+      <div class="case rv">
+        <div class="case-top"><div class="case-ic">🏭</div><div><h3>КПП промышленного объекта</h3><p>Ростовская область · 2023</p></div></div>
+        <div class="case-body">
+          <div class="case-item"><span class="c-lbl">Задача</span><p>Организовать контроль въезда транспорта и прохода сотрудников. Интеграция с существующей системой учёта рабочего времени в 1С.</p></div>
+          <div class="case-item"><span class="c-lbl">Решение</span><p>Прокладка оптоволокна, монтаж СКУД, IP-видеонаблюдение 48 камер, шлагбаумы с ANPR-распознаванием номеров, интеграция с 1С:Предприятие.</p></div>
+          <div class="case-item"><span class="c-lbl">Команда</span><p>4 инженера, срок реализации 18 рабочих дней</p></div>
+          <div class="case-res">✓ Сдан за 18 дней · Экономия на охране −40% · Обработка въезда ускорена на 70%</div>
+        </div>
+      </div>
+      <div class="case rv">
+        <div class="case-top"><div class="case-ic">🖥️</div><div><h3>Серверная комната под ключ</h3><p>Средний бизнес · 120 рабочих мест</p></div></div>
+        <div class="case-body">
+          <div class="case-item"><span class="c-lbl">Задача</span><p>Заменить устаревшую физическую инфраструктуру, перейти на виртуализацию, обеспечить отказоустойчивость и регулярное резервное копирование.</p></div>
+          <div class="case-item"><span class="c-lbl">Решение</span><p>Монтаж серверной, 3 сервера Supermicro, VMware vSphere, система резервного копирования Veeam Backup, ИБП APC с мониторингом.</p></div>
+          <div class="case-item"><span class="c-lbl">Команда</span><p>2 инженера, срок реализации 12 рабочих дней</p></div>
+          <div class="case-res">✓ Простои 0 ч/мес · Миграция без потери данных · Время восстановления −80%</div>
+        </div>
+      </div>
+      <div class="case rv">
+        <div class="case-top"><div class="case-ic">🌐</div><div><h3>ИТ-аутсорсинг сети офисов</h3><p>Торговая сеть · 5 объектов</p></div></div>
+        <div class="case-body">
+          <div class="case-item"><span class="c-lbl">Задача</span><p>Объединить 5 офисов в единую инфраструктуру, обеспечить стабильный интернет и централизованное управление видеонаблюдением.</p></div>
+          <div class="case-item"><span class="c-lbl">Решение</span><p>Оптоволоконная магистраль между объектами, единая система видеонаблюдения 64 камеры, абонентское ИТ-обслуживание всех пяти точек.</p></div>
+          <div class="case-item"><span class="c-lbl">Команда</span><p>3 инженера, срок реализации 24 рабочих дня</p></div>
+          <div class="case-res">✓ Единый договор вместо 5 подрядчиков · Экономия −35% · Мониторинг 24/7</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- КАЛЬКУЛЯТОР -->
+<section id="calc">
+  <div class="wrap">
+    <div class="rv">
+      <div class="sec-lbl"><div class="sec-lbl-sq"></div><div class="sec-lbl-txt">Калькулятор стоимости</div></div>
+      <h2>Узнайте <em>примерную цену</em></h2>
+      <p class="sec-desc">Настройте параметры — получите ориентир. Точная стоимость после бесплатного аудита.</p>
+    </div>
+    <div class="calc-wrap">
+      <div class="calc-form rv">
+        <div class="calc-group">
+          <div class="calc-label">Количество рабочих мест <span id="lbl-seats">25</span></div>
+          <input type="range" class="calc-slider" id="sl-seats" min="5" max="200" value="25" step="5" oninput="calcUpdate()">
+        </div>
+        <div class="calc-group">
+          <div class="calc-label">Количество серверов <span id="lbl-servers">2</span></div>
+          <input type="range" class="calc-slider" id="sl-servers" min="0" max="20" value="2" step="1" oninput="calcUpdate()">
+        </div>
+        <div class="calc-group">
+          <div class="calc-label">Количество объектов (офисов) <span id="lbl-offices">1</span></div>
+          <input type="range" class="calc-slider" id="sl-offices" min="1" max="10" value="1" step="1" oninput="calcUpdate()">
+        </div>
+        <div class="calc-group">
+          <div class="calc-label" style="margin-bottom:4px">Дополнительные системы</div>
+          <div class="calc-checks">
+            <label class="calc-check"><input type="checkbox" id="cb-cctv" onchange="calcUpdate()"><span class="calc-chip">Видеонаблюдение</span></label>
+            <label class="calc-check"><input type="checkbox" id="cb-skud" onchange="calcUpdate()"><span class="calc-chip">СКУД</span></label>
+            <label class="calc-check"><input type="checkbox" id="cb-wifi" onchange="calcUpdate()"><span class="calc-chip">Wi-Fi / сеть</span></label>
+            <label class="calc-check"><input type="checkbox" id="cb-backup" onchange="calcUpdate()"><span class="calc-chip">Резервное копирование</span></label>
+            <label class="calc-check"><input type="checkbox" id="cb-ib" onchange="calcUpdate()"><span class="calc-chip">Инфобезопасность</span></label>
+          </div>
+        </div>
+        <div class="calc-group">
+          <div class="calc-label" style="margin-bottom:4px">Приоритет реакции</div>
+          <div class="calc-checks">
+            <label class="calc-check"><input type="radio" name="sla" id="sla-std" onchange="calcUpdate()" checked><span class="calc-chip">Стандарт (до 4 ч)</span></label>
+            <label class="calc-check"><input type="radio" name="sla" id="sla-biz" onchange="calcUpdate()"><span class="calc-chip">Бизнес (до 1 ч)</span></label>
+            <label class="calc-check"><input type="radio" name="sla" id="sla-vip" onchange="calcUpdate()"><span class="calc-chip">Премиум (15 мин)</span></label>
+          </div>
+        </div>
+      </div>
+      <div class="calc-result rv">
+        <div>
+          <div class="calc-result-title">Ориентировочная стоимость</div>
+          <div class="calc-price-main">
+            <div class="calc-price-num" id="res-price">14 500 ₽</div>
+            <div class="calc-price-per">в месяц · фиксированно</div>
+          </div>
+        </div>
+        <div class="calc-divider"></div>
+        <div class="calc-breakdown">
+          <div class="calc-row"><span class="calc-row-label">Базовое обслуживание</span><span class="calc-row-val" id="res-base">12 000 ₽</span></div>
+          <div class="calc-row"><span class="calc-row-label">Серверная инфраструктура</span><span class="calc-row-val" id="res-servers">0 ₽</span></div>
+          <div class="calc-row"><span class="calc-row-label">Доп. системы</span><span class="calc-row-val" id="res-extra">0 ₽</span></div>
+          <div class="calc-row"><span class="calc-row-label">SLA-коэффициент</span><span class="calc-row-val accent" id="res-sla">×1.0</span></div>
+        </div>
+        <div class="calc-divider"></div>
+        <div class="calc-saving">
+          <div class="calc-saving-icon">💰</div>
+          <p>Экономия vs штат: <strong id="res-saving">от 115 500 ₽/мес</strong><br>Штатный ИТ-специалист обходится от 130 000 ₽</p>
+        </div>
+        <a href="#contact" class="calc-cta-btn">Получить точный расчёт →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ВЕНДОРЫ -->
+<section id="vendors">
+  <div class="wrap">
+    <div class="rv">
+      <div class="sec-lbl"><div class="sec-lbl-sq"></div><div class="sec-lbl-txt">Оборудование и партнёры</div></div>
+      <h2>Работаем с <em>проверенными</em> вендорами</h2>
+      <p class="sec-desc vendors-intro">Подбираем и поставляем оборудование ведущих производителей по оптовым ценам. Клиенты на абонентском обслуживании получают скидку до 15%.</p>
+    </div>
+    <div class="vendors-cats rv">
+      <div class="vcat">
+        <div class="vcat-title">Серверы и СХД</div>
+        <div class="vcat-logos">
+          <div class="vlogo">Supermicro</div>
+          <div class="vlogo">Dell EMC</div>
+          <div class="vlogo">HP Enterprise</div>
+          <div class="vlogo">Lenovo DCG</div>
+          <div class="vlogo">IBM</div>
+          <div class="vlogo">Synology</div>
+        </div>
+      </div>
+      <div class="vcat">
+        <div class="vcat-title">Сетевое оборудование</div>
+        <div class="vcat-logos">
+          <div class="vlogo">Cisco</div>
+          <div class="vlogo">Mikrotik</div>
+          <div class="vlogo">Huawei</div>
+          <div class="vlogo">TP-Link</div>
+          <div class="vlogo">D-Link</div>
+          <div class="vlogo">Ubiquiti</div>
+          <div class="vlogo">Zyxel</div>
+        </div>
+      </div>
+      <div class="vcat">
+        <div class="vcat-title">Видеонаблюдение и СКУД</div>
+        <div class="vcat-logos">
+          <div class="vlogo">Hikvision</div>
+          <div class="vlogo">Dahua</div>
+          <div class="vlogo">Axis</div>
+          <div class="vlogo">Bolid</div>
+          <div class="vlogo">Parsec</div>
+          <div class="vlogo">Rубеж</div>
+        </div>
+      </div>
+      <div class="vcat">
+        <div class="vcat-title">ПО и виртуализация</div>
+        <div class="vcat-logos">
+          <div class="vlogo">VMware</div>
+          <div class="vlogo">Veeam</div>
+          <div class="vlogo">Microsoft</div>
+          <div class="vlogo">1С</div>
+          <div class="vlogo">Kaspersky</div>
+          <div class="vlogo">Dr.Web</div>
+        </div>
+      </div>
+      <div class="vcat">
+        <div class="vcat-title">Электропитание и среда</div>
+        <div class="vcat-logos">
+          <div class="vlogo">APC by SE</div>
+          <div class="vlogo">Eaton</div>
+          <div class="vlogo">Delta</div>
+          <div class="vlogo">Legrand</div>
+          <div class="vlogo">Panduit</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="rv" style="text-align:center;margin-bottom:44px">
+      <div class="sec-lbl" style="justify-content:center"><div class="sec-lbl-sq"></div><div class="sec-lbl-txt">FAQ</div></div>
+      <h2>Частые <em>вопросы</em></h2>
+    </div>
+    <div class="faq rv">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><h3>Чем вы отличаетесь от штатного системного администратора?</h3><div class="faq-arrow">+</div></div>
+        <div class="faq-a"><p>Штатный сотрудник — один человек с ограниченными компетенциями, который болеет, уходит в отпуск и может уволиться в самый неподходящий момент. Мы — команда инженеров с 20-летним опытом в разных областях: серверы, сети, СКУД, видеонаблюдение, СКС. Вы получаете весь набор компетенций с юридической ответственностью по договору. При этом реальная экономия составляет 30–40% по сравнению со штатным ИТ-отделом с учётом всех расходов.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><h3>Как быстро вы реагируете на проблемы?</h3><div class="faq-arrow">+</div></div>
+        <div class="faq-a"><p>Время реакции фиксируется в договоре в виде SLA. Для тарифа «Премиум» — удалённое подключение в течение 15 минут, выезд по Ростову в течение 2 часов. Для «Бизнес» — до 1 часа удалённо. Для «Базового» — до 4 часов. При критических инцидентах (остановка производства, недоступность серверов) — реакция вне очереди по всем тарифам.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><h3>Работаете ли вы за пределами Ростова-на-Дону?</h3><div class="faq-arrow">+</div></div>
+        <div class="faq-a"><p>Да, мы обслуживаем объекты по всей Ростовской области и в соседних регионах. Удалённая поддержка — без географических ограничений. Большинство задач (80%+) решается удалённо без выезда. Выездное обслуживание по области — по договорённости с учётом транспортных расходов.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><h3>Что входит в бесплатный аудит ИТ-инфраструктуры?</h3><div class="faq-arrow">+</div></div>
+        <div class="faq-a"><p>Инженер приезжает на объект и проводит полный осмотр: состояние серверного оборудования, сетевой инфраструктуры, рабочих станций, систем безопасности. По итогам вы получаете письменный отчёт с перечнем проблем, рекомендациями по приоритетам и коммерческое предложение с фиксированной стоимостью. Никаких обязательств — вы сами решаете, работать с нами или нет.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><h3>Вы занимаетесь подбором и поставкой оборудования?</h3><div class="faq-arrow">+</div></div>
+        <div class="faq-a"><p>Да. Мы подбираем, закупаем и поставляем оборудование по оптовым ценам через проверенных дистрибьюторов. Серверы Supermicro, Dell, HP; сетевое оборудование Cisco, Mikrotik, TP-Link; системы безопасности Hikvision, Dahua; ИБП APC. Клиенты на абонентском обслуживании получают скидку до 15% на оборудование.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><h3>Как происходит переход от другого подрядчика?</h3><div class="faq-arrow">+</div></div>
+        <div class="faq-a"><p>Берём на себя весь процесс передачи дел: запрашиваем документацию, схемы сетей, пароли и учётные данные у предыдущего подрядчика. Если документации нет — проводим аудит и восстанавливаем её с нуля. Переход занимает 3–5 рабочих дней без остановки работы вашей компании.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- КОНТАКТЫ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="form-wrap">
+      <div class="form-left rv">
+        <div class="sec-lbl"><div class="sec-lbl-sq"></div><div class="sec-lbl-txt">Связаться с нами</div></div>
+        <h2>Получите бесплатный<br><em>ИТ-аудит объекта</em></h2>
+        <p class="sec-desc">Инженер приедет, оценит инфраструктуру и даст конкретные рекомендации — без обязательств и навязывания услуг.</p>
+        <div class="form-contacts">
+          <a href="tel:+79044421682" class="fc">
+            <div class="fc-ic">📱</div>
+            <div class="fc-txt"><span class="fc-lbl">Телефон</span><span class="fc-val">+7 (928) 000-12-34</span></div>
+          </a>
+          <a href="mailto:911@itreshenie.ru" class="fc">
+            <div class="fc-ic">✉️</div>
+            <div class="fc-txt"><span class="fc-lbl">Email</span><span class="fc-val">911@itreshenie.ru</span></div>
+          </a>
+          <a href="https://wa.me/79044421682" class="fc">
+            <div class="fc-ic">💬</div>
+            <div class="fc-txt"><span class="fc-lbl">WhatsApp</span><span class="fc-val">+7 (904) 442-16-82</span></div>
+          </a>
+          <a href="https://t.me/itreshenie" class="fc">
+            <div class="fc-ic">✈️</div>
+            <div class="fc-txt"><span class="fc-lbl">Telegram</span><span class="fc-val">@itreshenie</span></div>
+          </a>
+        </div>
+      </div>
+      <div class="form-right rv">
+        <div class="form" id="cform">
+          <div class="f-row">
+            <div class="f-group"><label>Ваше имя *</label><input type="text" id="fn" placeholder="Иван Петров" required></div>
+            <div class="f-group"><label>Телефон *</label><input type="tel" id="fp" placeholder="+7 (___) ___-__-__" required></div>
+          </div>
+          <div class="f-group"><label>Компания</label><input type="text" id="fc" placeholder="ООО «Ваша компания»"></div>
+          <div class="f-group">
+            <label>Интересующая услуга</label>
+            <select id="fs">
+              <option value="">Выберите услугу...</option>
+              <option>ИТ-аутсорсинг (абонентское обслуживание)</option>
+              <option>Серверы и системы хранения данных</option>
+              <option>Видеонаблюдение</option>
+              <option>СКУД и контроль доступа</option>
+              <option>СКС и структурированные сети</option>
+              <option>Оптоволокно и беспроводные сети</option>
+              <option>Комплексный проект под ключ</option>
+              <option>Бесплатный аудит ИТ-инфраструктуры</option>
+            </select>
+          </div>
+          <div class="f-group"><label>Опишите задачу</label><textarea id="fm" placeholder="Кратко опишите вашу ситуацию или задачу — это поможет инженеру подготовиться к аудиту..."></textarea></div>
+          <div class="form-submit">
+            <button class="btn-submit" onclick="sendForm()">Отправить заявку →</button>
+            <p class="form-note">Перезвоним в течение 15 минут<br>в рабочее время (9:00–18:00)</p>
+          </div>
+          <div class="form-ok" id="fok">✓ Заявка отправлена! Перезвоним в течение 15 минут.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <a href="#" class="logo foot-logo">
+        <div class="logo-mark"><div class="logo-it">IT</div></div>
+        <div class="logo-text">
+          <div class="logo-name"><span>АйТи</span>Решение</div>
+          <div class="logo-sub">Аутсорсинг · Ростов-на-Дону</div>
+        </div>
+      </a>
+      <div class="foot-links">
+        <a href="#pain">Проблемы</a>
+        <a href="#services">Услуги</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="#cases">Кейсы</a>
+        <a href="#calc">Калькулятор</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Контакты</a>
+      </div>
+    </div>
+    <p class="foot-copy">© 2025 АйТиРешение · Ростов-на-Дону · itreshenie.ru · ИТ-инфраструктура и аутсорсинг для бизнеса</p>
+  </div>
+</footer>
+
+<script>
+/* Scroll reveal */
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');obs.unobserve(x.target)}})},{threshold:0.06});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+['pain-grid','svc-grid','why-grid','cases-grid','price-grid','steps'].forEach(c=>{
+  document.querySelectorAll(`.${c} > *`).forEach((el,i)=>el.style.transitionDelay=(i*60)+'ms');
+});
+
+/* Nav border on scroll */
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').style.borderBottomColor=window.scrollY>40?'rgba(204,21,21,0.22)':'#ECECEC';
+});
+
+/* Mobile nav */
+function toggleNav(){
+  const ul=document.getElementById('nav-links');
+  const open=ul.style.display==='flex';
+  ul.style.cssText=open?'':'display:flex;flex-direction:column;position:fixed;top:66px;left:0;right:0;background:rgba(255,255,255,0.98);padding:20px 28px;gap:18px;border-bottom:1px solid #eee;backdrop-filter:blur(12px);z-index:99';
+}
+document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{
+  document.getElementById('nav-links').style.cssText='';
+}));
+
+/* FAQ accordion */
+function toggleFaq(el){
+  const item=el.parentElement;
+  const was=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!was)item.classList.add('open');
+}
+
+/* Calculator */
+function calcUpdate(){
+  const seats=+document.getElementById('sl-seats').value;
+  const servers=+document.getElementById('sl-servers').value;
+  const offices=+document.getElementById('sl-offices').value;
+  document.getElementById('lbl-seats').textContent=seats;
+  document.getElementById('lbl-servers').textContent=servers;
+  document.getElementById('lbl-offices').textContent=offices;
+
+  const base=Math.max(12000,seats*800+(offices-1)*4000);
+  const srv=servers*1500;
+  let extra=0;
+  if(document.getElementById('cb-cctv').checked) extra+=3500;
+  if(document.getElementById('cb-skud').checked) extra+=2500;
+  if(document.getElementById('cb-wifi').checked) extra+=2000;
+  if(document.getElementById('cb-backup').checked) extra+=1500;
+  if(document.getElementById('cb-ib').checked) extra+=2000;
+  let sla=1.0,slaLabel='×1.0';
+  if(document.getElementById('sla-biz').checked){sla=1.25;slaLabel='×1.25'}
+  if(document.getElementById('sla-vip').checked){sla=1.6;slaLabel='×1.6'}
+
+  const total=Math.round(((base+srv+extra)*sla)/100)*100;
+  const staffCost=Math.max(130000,seats*1200);
+  const saving=staffCost-total;
+
+  document.getElementById('res-price').textContent=total.toLocaleString('ru-RU')+' ₽';
+  document.getElementById('res-base').textContent=base.toLocaleString('ru-RU')+' ₽';
+  document.getElementById('res-servers').textContent=srv.toLocaleString('ru-RU')+' ₽';
+  document.getElementById('res-extra').textContent=extra.toLocaleString('ru-RU')+' ₽';
+  document.getElementById('res-sla').textContent=slaLabel;
+  document.getElementById('res-saving').textContent='от '+Math.max(0,saving).toLocaleString('ru-RU')+' ₽/мес';
+}
+calcUpdate();
+
+/* Form submit */
+/* Для реальной отправки: зарегистрируйтесь на formspree.io и замените YOUR_FORM_ID */
+function sendForm(){
+  const name=document.getElementById('fn').value.trim();
+  const phone=document.getElementById('fp').value.trim();
+  if(!name){alert('Пожалуйста, укажите ваше имя');return}
+  if(!phone){alert('Пожалуйста, укажите телефон для связи');return}
+
+  /* РАСКОММЕНТИРУЙТЕ ДЛЯ РЕАЛЬНОЙ ОТПРАВКИ ЧЕРЕЗ FORMSPREE:
+  const data={
+    name, phone,
+    company:document.getElementById('fc').value,
+    service:document.getElementById('fs').value,
+    message:document.getElementById('fm').value
+  };
+  fetch('https://formspree.io/f/YOUR_FORM_ID',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify(data)
+  });
+  */
+
+  const form=document.getElementById('cform');
+  form.style.opacity='0.4';
+  form.style.pointerEvents='none';
+  document.getElementById('fok').style.display='block';
+  setTimeout(()=>{
+    form.style.opacity='1';
+    form.style.pointerEvents='auto';
+    document.getElementById('fok').style.display='none';
+    ['fn','fp','fc','fm'].forEach(id=>document.getElementById(id).value='');
+    document.getElementById('fs').value='';
+  },4500);
+}
+</script>
+</body>
+</html>
