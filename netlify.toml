@@ -1,0 +1,23 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/rostov"
+  to = "/rostov/"
+  status = 301
+
+[[redirects]]
+  from = "/bataisk"
+  to = "/bataisk/"
+  status = 301
+
+[[redirects]]
+  from = "/aksai"
+  to = "/aksai/"
+  status = 301
