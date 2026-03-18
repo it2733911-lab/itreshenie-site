@@ -291,7 +291,7 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
       <div class="logo-mark"><div class="logo-it">IT</div></div>
       <div class="logo-text">
         <div class="logo-name"><span>АйТи</span>Решение</div>
-        <div class="logo-sub">Аутсорсинг · Ростов-на-Дону</div>
+        <div class="logo-sub">Аутсорсинг ИТ · Батайск · Ростов-на-Дону · Аксай</div>
       </div>
     </a>
     <ul class="nav-links" id="nav-links">
@@ -314,7 +314,7 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
       <div>
         <div class="eyebrow rv"><div class="eyebrow-sq"></div><div class="eyebrow-txt">Ростовская область · 20 лет на рынке</div></div>
         <h1 class="rv">ИТ-инфраструктура<br>для бизнеса —<br><em>под ключ, в срок</em></h1>
-        <p class="hero-desc rv">Аутсорсинг, серверы, видеонаблюдение, СКУД, СКС и оптика — один подрядчик для всех задач. Вы занимаетесь бизнесом — мы остальным.</p>
+        <p class="hero-desc rv">Аутсорсинг, создание сайтов, облачные услуги, 1С, серверы, видеонаблюдение, кабельные сети, слаботочные системы, информационная безопасность, AI-агенты и искусственный интеллект, PDM, SCM, APS, MES системы и другие программные решения — один подрядчик для всех задач.</p>
         <div class="hero-btns rv">
           <a href="#contact" class="btn-red">🎯 Бесплатный аудит</a>
           <a href="#services" class="btn-out">→ Наши услуги</a>
@@ -780,17 +780,17 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
         <h2>Получите бесплатный<br><em>ИТ-аудит объекта</em></h2>
         <p class="sec-desc">Инженер приедет, оценит инфраструктуру и даст конкретные рекомендации — без обязательств и навязывания услуг.</p>
         <div class="form-contacts">
-          <a href="tel:+79044421682" class="fc">
+          <a href="tel:89044421682" class="fc">
             <div class="fc-ic">📱</div>
-            <div class="fc-txt"><span class="fc-lbl">Телефон</span><span class="fc-val">+7 (928) 000-12-34</span></div>
+            <div class="fc-txt"><span class="fc-lbl">Телефон</span><span class="fc-val">8 (904) 442-16-82</span></div>
           </a>
-          <a href="mailto:911@itreshenie.ru" class="fc">
+          <a href="/cdn-cgi/l/email-protection#0a333b3b4a637e786f79626f64636f24787f" class="fc">
             <div class="fc-ic">✉️</div>
-            <div class="fc-txt"><span class="fc-lbl">Email</span><span class="fc-val">911@itreshenie.ru</span></div>
+            <div class="fc-txt"><span class="fc-lbl">Email</span><span class="fc-val"><span class="__cf_email__" data-cfemail="5e676f6f1e372a2c3b2d363b30373b702c2b">[email&#160;protected]</span></span></div>
           </a>
           <a href="https://wa.me/79044421682" class="fc">
             <div class="fc-ic">💬</div>
-            <div class="fc-txt"><span class="fc-lbl">WhatsApp</span><span class="fc-val">+7 (904) 442-16-82</span></div>
+            <div class="fc-txt"><span class="fc-lbl">WhatsApp</span><span class="fc-val">8 (904) 442-16-82</span></div>
           </a>
           <a href="https://t.me/itreshenie" class="fc">
             <div class="fc-ic">✈️</div>
@@ -839,7 +839,7 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
         <div class="logo-mark"><div class="logo-it">IT</div></div>
         <div class="logo-text">
           <div class="logo-name"><span>АйТи</span>Решение</div>
-          <div class="logo-sub">Аутсорсинг · Ростов-на-Дону</div>
+          <div class="logo-sub">Аутсорсинг ИТ · Батайск · Ростов-на-Дону · Аксай</div>
         </div>
       </a>
       <div class="foot-links">
@@ -856,7 +856,7 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* Scroll reveal */
 const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');obs.unobserve(x.target)}})},{threshold:0.06});
 document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
@@ -921,39 +921,50 @@ function calcUpdate(){
 }
 calcUpdate();
 
-/* Form submit */
-/* Для реальной отправки: зарегистрируйтесь на formspree.io и замените YOUR_FORM_ID */
-function sendForm(){
+async function sendForm(){
   const name=document.getElementById('fn').value.trim();
   const phone=document.getElementById('fp').value.trim();
   if(!name){alert('Пожалуйста, укажите ваше имя');return}
   if(!phone){alert('Пожалуйста, укажите телефон для связи');return}
-
-  /* РАСКОММЕНТИРУЙТЕ ДЛЯ РЕАЛЬНОЙ ОТПРАВКИ ЧЕРЕЗ FORMSPREE:
-  const data={
-    name, phone,
-    company:document.getElementById('fc').value,
-    service:document.getElementById('fs').value,
-    message:document.getElementById('fm').value
-  };
-  fetch('https://formspree.io/f/YOUR_FORM_ID',{
-    method:'POST',
-    headers:{'Content-Type':'application/json','Accept':'application/json'},
-    body:JSON.stringify(data)
-  });
-  */
-
   const form=document.getElementById('cform');
-  form.style.opacity='0.4';
+  const btn=form.querySelector('.btn-submit');
+  btn.textContent='Отправляем...';
+  btn.disabled=true;
+  form.style.opacity='0.6';
   form.style.pointerEvents='none';
-  document.getElementById('fok').style.display='block';
-  setTimeout(()=>{
+  try{
+    const res=await fetch('https://formspree.io/f/mkoqkndo',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({
+        'Имя': name,
+        'Телефон': phone,
+        'Компания': document.getElementById('fc').value,
+        'Услуга': document.getElementById('fs').value,
+        'Сообщение': document.getElementById('fm').value
+      })
+    });
+    if(res.ok){
+      form.style.opacity='1';
+      form.style.pointerEvents='auto';
+      const fok=document.getElementById('fok');
+      fok.textContent='✓ Заявка отправлена! Перезвоним в течение 15 минут.';
+      fok.style.display='block';
+      ['fn','fp','fc','fm'].forEach(id=>document.getElementById(id).value='');
+      document.getElementById('fs').value='';
+      btn.textContent='Отправить заявку →';
+      btn.disabled=false;
+      setTimeout(()=>fok.style.display='none',6000);
+    } else {
+      throw new Error();
+    }
+  } catch(e){
     form.style.opacity='1';
     form.style.pointerEvents='auto';
-    document.getElementById('fok').style.display='none';
-    ['fn','fp','fc','fm'].forEach(id=>document.getElementById(id).value='');
-    document.getElementById('fs').value='';
-  },4500);
+    btn.textContent='Отправить заявку →';
+    btn.disabled=false;
+    alert('Ошибка отправки. Позвоните нам: 8 (904) 442-16-82');
+  }
 }
 </script>
 </body>
