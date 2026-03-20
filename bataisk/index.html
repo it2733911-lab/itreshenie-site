@@ -4,14 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>АйТиРешение — ИТ-аутсорсинг в Батайске | Обслуживание компьютеров</title>
-<meta name="description" content="ИТ-аутсорсинг в Батайске. Обслуживание компьютеров и серверов, СКУД, видеонаблюдение под ключ. Выезд из Ростова за 30 минут. Бесплатный аудит.">
+<meta name="description" content="ИТ-аутсорсинг в Батайске. Обслуживание компьютеров и серверов, СКУД, видеонаблюдение под ключ. Выезд от 2 часов. Бесплатный аудит.">
 <meta name="keywords" content="ИТ аутсорсинг Батайск, обслуживание компьютеров Батайск, системный администратор Батайск, ремонт компьютеров Батайск, СКУД Батайск">
 <meta property="og:title" content="ИТ-аутсорсинг в Батайске — АйТиРешение">
-<meta property="og:description" content="ИТ-аутсорсинг в Батайске. Обслуживание компьютеров и серверов, СКУД, видеонаблюдение под ключ. Выезд из Ростова за 30 минут. Бесплатный аудит.">
+<meta property="og:description" content="ИТ-аутсорсинг в Батайске. Обслуживание компьютеров и серверов, СКУД, видеонаблюдение под ключ. Выезд от 2 часов. Бесплатный аудит.">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://itreshenie.ru/bataisk/">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Manrope:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
-<style>
 <style>
 :root{
   --red:#CC1515;--red2:#E02020;--rg:rgba(204,21,21,0.09);
@@ -283,10 +282,32 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
   .form-wrap,.calc-wrap{grid-template-columns:1fr}.f-row{grid-template-columns:1fr}
   .calc-result{position:static}
 }
+
+/* ── МОБИЛЬНЫЕ СТИЛИ ── */
+@media(max-width:768px){
+  /* Блок городов */
+  #cities > .wrap > div[style*="repeat(3,1fr)"]{
+    grid-template-columns:1fr!important;
+  }
+  /* Форма и калькулятор */
+  .form-wrap,.calc-wrap{grid-template-columns:1fr!important}
+  .f-row{grid-template-columns:1fr!important}
+  .calc-result{position:static!important}
+  /* Полоса охвата */
+  #cities .rv[style*="flex"]{flex-direction:column!important;align-items:flex-start!important}
+  /* Красный блок Батайск на мобиле */
+  #cities a[style*="background:#CC1515"]{padding:28px 20px!important}
+  /* Карточки городов */
+  #cities a[style*="padding:36px"]{padding:24px 20px!important}
+}
+@media(max-width:480px){
+  /* Hero марка IT */
+  .hero-mark{width:200px!important;height:200px!important}
+  .hero-mark-it{font-size:80px!important}
+  /* Статы 2 колонки */
+  .stats{grid-template-columns:repeat(2,1fr)!important}
+}
 </style>
-@media(max-width:640px){section[style*="grid-template-columns:1fr 1fr"]>div{grid-template-columns:1fr!important}}
-</style>
-</head>
 <body>
 
 
@@ -296,11 +317,11 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
       <div class="logo-mark"><div class="logo-it">IT</div></div>
       <div class="logo-text">
         <div class="logo-name"><span>АйТи</span>Решение</div>
-        <div class="logo-sub">Аутсорсинг · Ростов-на-Дону</div>
+        <div class="logo-sub">Аутсорсинг ИТ · Батайск · Ростов-на-Дону · Аксай</div>
       </div>
     </a>
     <ul class="nav-links" id="nav-links">
-      <li><a href="/">Главная</a></li><li><a href="#pain">Проблемы</a></li>
+      <li><a href="#pain">Проблемы</a></li>
       <li><a href="#services">Услуги</a></li>
       <li><a href="#pricing">Тарифы</a></li>
       <li><a href="#cases">Кейсы</a></li>
@@ -312,28 +333,27 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
   </div>
 </nav>
 
-
 <!-- HERO -->
 <section id="hero">
   <div class="wrap">
     <div class="hero-in">
       <div>
         <div class="eyebrow rv"><div class="eyebrow-sq"></div><div class="eyebrow-txt">Батайск и Ростовская область · 20 лет опыта</div></div>
-        <h1 class="rv">ИТ-аутсорсинг<br>в Батайске —<br><em>выезд за 30 минут</em></h1>
-        <p class="hero-desc rv">Обслуживаем бизнес Батайска с выездом из Ростова за 30 минут. Серверы, СКУД, видеонаблюдение, компьютеры — один подрядчик для всей ИТ-инфраструктуры.</p>
+        <h1 class="rv">ИТ-аутсорсинг<br>в Батайске —<br><em>выезд от 2 часов</em></h1>
+        <p class="hero-desc rv">Обслуживаем бизнес Батайска — промышленные предприятия, торговые сети, медицинские учреждения. Выезд инженера от 2 часов. Один договор на всю ИТ-инфраструктуру.</p>
         <div class="hero-btns rv">
           <a href="#contact" class="btn-red">🎯 Бесплатный аудит</a>
           <a href="#services" class="btn-out">→ Наши услуги</a>
         </div>
-        <div class="stats rv">
-          <div class="stat"><div class="stat-n">Выезд в</div><div class="stat-l">Батайск за 30 мин</div></div>
-          <div class="stat"><div class="stat-n">15 мин</div><div class="stat-l">реакция удалённо</div></div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--gray3);border:1px solid var(--gray3);border-radius:var(--r);overflow:hidden;margin-bottom:44px">
           <div class="stat"><div class="stat-n">20+</div><div class="stat-l">лет на рынке</div></div>
-          <div class="stat"><div class="stat-n">1</div><div class="stat-l">подрядчик на всё</div></div>
+          <div class="stat"><div class="stat-n">200+</div><div class="stat-l">объектов сдано</div></div>
+          <div class="stat"><div class="stat-n">15 мин</div><div class="stat-l">реакция удалённо</div></div>
+          <div class="stat"><div class="stat-n">от 2 ч</div><div class="stat-l">выезд в Батайск</div></div>
         </div>
-        <div class="rv" style="margin-top:20px;padding:14px 18px;background:var(--gray1);border-radius:var(--r);border:1px solid var(--gray2)">
-          <span style="font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-right:12px">Также работаем в:</span>
-          <a href="/rostov/" style="color:var(--muted);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='var(--black)'" onmouseout="this.style.color='var(--muted)'">Ростов-на-Дону</a> · <span style="color:var(--red);font-weight:700">Батайск</span> · <a href="/aksai/" style="color:var(--muted);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='var(--black)'" onmouseout="this.style.color='var(--muted)'">Аксай</a>
+        <div class="rv" style="padding:12px 16px;background:var(--gray1);border-radius:var(--r);border:1px solid var(--gray2);display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+          <span style="font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted)">Также работаем в:</span>
+          <a href="/rostov/" style="font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#888;text-decoration:none">Ростов</a> <span style="color:#D4D4D4">·</span> <a href="/aksai/" style="font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#888;text-decoration:none">Аксай</a>
         </div>
       </div>
       <div class="hero-right rv">
@@ -343,18 +363,19 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
   </div>
 </section>
 
+
 <!-- LOCAL -->
-<section style="padding:48px 0;background:var(--red)">
+<section style="padding:52px 0;background:var(--red)">
   <div class="wrap">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center" class="rv">
       <div>
-        <div style="font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:12px">📍 Работаем в Батайск</div>
-        <h2 style="color:#fff;font-size:clamp(20px,2.8vw,34px);margin-bottom:16px">Почему выбирают нас<br>в Батайске</h2>
-        <p style="font-size:15px;color:rgba(255,255,255,0.82);line-height:1.75">Обслуживаем предприятия и офисы Батайска: промышленную зону, торговые центры, медицинские учреждения и малый бизнес. Знаем специфику города — готовы выехать в любой район.</p>
+        <div style="font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:12px">📍 Работаем в этом городе</div>
+        <h2 style="color:#fff;font-size:clamp(20px,2.8vw,34px);margin-bottom:16px">Почему нас выбирает бизнес Батайска</h2>
+        <p style="font-size:15px;color:rgba(255,255,255,0.82);line-height:1.75">В Батайске нет ни одной местной компании с полным корпоративным ИТ-аутсорсингом. Мы первые и единственные, кто предлагает комплексное обслуживание с договором и SLA.</p>
       </div>
       <div>
-        <p style="font-size:15px;color:rgba(255,255,255,0.82);line-height:1.75;margin-bottom:24px">В Батайске нет крупных местных ИТ-компаний с полным спектром услуг. Мы закрываем эту нишу полностью — от ремонта компьютера до монтажа серверной и СКУД под ключ.</p>
-        <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--red);font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:14px 24px;border-radius:var(--r);text-decoration:none;transition:transform 0.15s,box-shadow 0.2s" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='';this.style.boxShadow=''">Получить аудит в Батайск →</a>
+        <p style="font-size:15px;color:rgba(255,255,255,0.82);line-height:1.75;margin-bottom:24px">Обслуживаем предприятия промышленной зоны, торговые центры, частные клиники, офисы малого бизнеса. Знаем специфику Батайска — выезжаем в любой район.</p>
+        <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--red);font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:14px 24px;border-radius:var(--r);text-decoration:none">Получить аудит в Батайске →</a>
       </div>
     </div>
   </div>
@@ -423,9 +444,6 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
     </div>
   </div>
 </section>
-
-<!-- УСЛУГИ -->
-
 <!-- УСЛУГИ -->
 <section id="services">
   <div class="wrap">
@@ -474,9 +492,6 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
     </div>
   </div>
 </section>
-
-<!-- ТАРИФЫ -->
-
 <!-- ТАРИФЫ -->
 <section id="pricing">
   <div class="wrap">
@@ -552,9 +567,6 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
     <p class="price-note rv">Цены ориентировочные. Точная стоимость — после бесплатного аудита. <a href="#contact" style="color:var(--red)">Оставить заявку →</a></p>
   </div>
 </section>
-
-<!-- ПОЧЕМУ МЫ -->
-
 <!-- ПОЧЕМУ МЫ -->
 <section id="why">
   <div class="wrap">
@@ -573,9 +585,6 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
     </div>
   </div>
 </section>
-
-<!-- КАК РАБОТАЕМ -->
-
 <!-- КАК РАБОТАЕМ -->
 <section id="how">
   <div class="wrap">
@@ -594,46 +603,45 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
     </div>
   </div>
 </section>
-
-<!-- КЕЙСЫ -->
-
 <!-- КЕЙСЫ -->
 <section id="cases">
   <div class="wrap">
     <div class="rv">
-      <div class="sec-lbl"><div class="sec-lbl-sq"></div><div class="sec-lbl-txt">Кейсы в Батайск</div></div>
+      <div class="sec-lbl"><div class="sec-lbl-sq"></div><div class="sec-lbl-txt">Кейсы в Батайске</div></div>
       <h2>Проекты в <em>Батайске</em></h2>
-      <p class="sec-desc">Реализованные объекты в Батайск и Ростовской области.</p>
+      <p class="sec-desc">Реализованные объекты в Батайске и Ростовской области.</p>
     </div>
     <div class="cases-grid">
       <div class="case rv">
-        <div class="case-top"><div class="case-ic">🏭</div><div><h3>Торговый центр в Батайске</h3><p>Батайск, торгово-офисный объект</p></div></div>
+        <div class="case-top"><div class="case-ic">🏭</div><div><h3>Торговый центр</h3><p>Батайск, торгово-офисный объект</p></div></div>
         <div class="case-body">
-          <div class="case-item"><span class="c-lbl">Задача</span><p>Видеонаблюдение, СКУД и структурированная сеть для ТЦ.</p></div>
-          <div class="case-item"><span class="c-lbl">Решение</span><p>СКС, 24 IP-камеры Hikvision, СКУД Parsec, Wi-Fi в торговых зонах.</p></div>
+          <div class="case-item"><span class="c-lbl">Задача</span><p>Видеонаблюдение, СКУД и СКС для торгового центра.</p></div>
+          <div class="case-item"><span class="c-lbl">Решение</span><p>СКС Cat6, 24 IP-камеры Hikvision, СКУД Parsec, Wi-Fi в торговых зонах.</p></div>
+          <div class="case-item"><span class="c-lbl">Команда</span><p>3 инженера, 12 рабочих дней</p></div>
           <div class="case-res">✓ Сдан за 12 дней · Полное покрытие объекта</div>
         </div>
       </div>
       <div class="case rv">
-        <div class="case-top"><div class="case-ic">🖥️</div><div><h3>Медицинский центр</h3><p>Частная клиника, 35 рабочих мест</p></div></div>
+        <div class="case-top"><div class="case-ic">🏥</div><div><h3>Медицинский центр</h3><p>Частная клиника, 35 рабочих мест</p></div></div>
         <div class="case-body">
           <div class="case-item"><span class="c-lbl">Задача</span><p>Абонентское ИТ-обслуживание, сервер 1С, резервное копирование.</p></div>
           <div class="case-item"><span class="c-lbl">Решение</span><p>Сервер Dell, 1С на виртуализации, ежедневный бэкап, удалённая поддержка.</p></div>
-          <div class="case-res">✓ Реакция 15 мин · Работаем 2 года без сбоев</div>
+          <div class="case-item"><span class="c-lbl">Команда</span><p>2 инженера, постоянное обслуживание</p></div>
+          <div class="case-res">✓ Реакция 15 мин · 2 года без сбоев</div>
         </div>
       </div>
       <div class="case rv">
-        <div class="case-top"><div class="case-ic">🌐</div><div><h3>Производственное предприятие</h3><p>Батайск, промышленная зона</p></div></div>
+        <div class="case-top"><div class="case-ic">🏗️</div><div><h3>Производственное предприятие</h3><p>Батайск, промышленная зона</p></div></div>
         <div class="case-body">
-          <div class="case-item"><span class="c-lbl">Задача</span><p>КПП, видеонаблюдение периметра, переговорная ИТ-инфраструктура.</p></div>
+          <div class="case-item"><span class="c-lbl">Задача</span><p>КПП, видеонаблюдение периметра, ИТ-инфраструктура офиса.</p></div>
           <div class="case-item"><span class="c-lbl">Решение</span><p>Оптика по территории, 32 камеры, шлагбаум, Wi-Fi в офисе.</p></div>
-          <div class="case-res">✓ Под ключ за 21 день · SLA-договор на обслуживание</div>
+          <div class="case-item"><span class="c-lbl">Команда</span><p>4 инженера, 21 рабочий день</p></div>
+          <div class="case-res">✓ Под ключ за 21 день · SLA-договор</div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 <!-- КАЛЬКУЛЯТОР -->
 <section id="calc">
   <div class="wrap">
@@ -700,9 +708,6 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
     </div>
   </div>
 </section>
-
-<!-- ВЕНДОРЫ -->
-
 <!-- ВЕНДОРЫ -->
 <section id="vendors">
   <div class="wrap">
@@ -770,9 +775,6 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
     </div>
   </div>
 </section>
-
-<!-- FAQ -->
-
 <!-- FAQ -->
 <section id="faq">
   <div class="wrap">
@@ -808,9 +810,6 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
     </div>
   </div>
 </section>
-
-<!-- КОНТАКТЫ -->
-
 <!-- КОНТАКТЫ -->
 <section id="contact">
   <div class="wrap">
@@ -820,9 +819,9 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
         <h2>Получите бесплатный<br><em>ИТ-аудит объекта</em></h2>
         <p class="sec-desc">Инженер приедет, оценит инфраструктуру и даст конкретные рекомендации — без обязательств и навязывания услуг.</p>
         <div class="form-contacts">
-          <a href="tel:+79044421682" class="fc">
+          <a href="tel:89044421682" class="fc">
             <div class="fc-ic">📱</div>
-            <div class="fc-txt"><span class="fc-lbl">Телефон</span><span class="fc-val">+7 (928) 000-12-34</span></div>
+            <div class="fc-txt"><span class="fc-lbl">Телефон</span><span class="fc-val">8 (904) 442-16-82</span></div>
           </a>
           <a href="mailto:911@itreshenie.ru" class="fc">
             <div class="fc-ic">✉️</div>
@@ -830,7 +829,7 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
           </a>
           <a href="https://wa.me/79044421682" class="fc">
             <div class="fc-ic">💬</div>
-            <div class="fc-txt"><span class="fc-lbl">WhatsApp</span><span class="fc-val">+7 (904) 442-16-82</span></div>
+            <div class="fc-txt"><span class="fc-lbl">WhatsApp</span><span class="fc-val">8 (904) 442-16-82</span></div>
           </a>
           <a href="https://t.me/itreshenie" class="fc">
             <div class="fc-ic">✈️</div>
@@ -870,9 +869,6 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
     </div>
   </div>
 </section>
-
-<!-- FOOTER -->
-
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
@@ -881,7 +877,7 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
         <div class="logo-mark"><div class="logo-it">IT</div></div>
         <div class="logo-text">
           <div class="logo-name"><span>АйТи</span>Решение</div>
-          <div class="logo-sub">Аутсорсинг · Ростов-на-Дону</div>
+          <div class="logo-sub">Аутсорсинг ИТ · Батайск · Ростов-на-Дону · Аксай</div>
         </div>
       </a>
       <div class="foot-links">
@@ -892,95 +888,18 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
         <a href="#calc">Калькулятор</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Контакты</a>
+        <a href="/rostov/">Ростов</a>
+        <a href="/bataisk/">Батайск</a>
+        <a href="/aksai/">Аксай</a>
       </div>
     </div>
     <p class="foot-copy">© 2025 АйТиРешение · Ростов-на-Дону · itreshenie.ru · ИТ-инфраструктура и аутсорсинг для бизнеса</p>
   </div>
 </footer>
 
-<script>
 
 <script>
-<script>
-/* Scroll reveal */
-const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');obs.unobserve(x.target)}})},{threshold:0.06});
-document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
-['pain-grid','svc-grid','why-grid','cases-grid','price-grid','steps'].forEach(c=>{
-  document.querySelectorAll(`.${c} > *`).forEach((el,i)=>el.style.transitionDelay=(i*60)+'ms');
-});
 
-/* Nav border on scroll */
-window.addEventListener('scroll',()=>{
-  document.getElementById('nav').style.borderBottomColor=window.scrollY>40?'rgba(204,21,21,0.22)':'#ECECEC';
-});
-
-/* Mobile nav */
-function toggleNav(){
-  const ul=document.getElementById('nav-links');
-  const open=ul.style.display==='flex';
-  ul.style.cssText=open?'':'display:flex;flex-direction:column;position:fixed;top:66px;left:0;right:0;background:rgba(255,255,255,0.98);padding:20px 28px;gap:18px;border-bottom:1px solid #eee;backdrop-filter:blur(12px);z-index:99';
-}
-document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{
-  document.getElementById('nav-links').style.cssText='';
-}));
-
-/* FAQ accordion */
-function toggleFaq(el){
-  const item=el.parentElement;
-  const was=item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
-  if(!was)item.classList.add('open');
-}
-
-/* Calculator */
-function calcUpdate(){
-  const seats=+document.getElementById('sl-seats').value;
-  const servers=+document.getElementById('sl-servers').value;
-  const offices=+document.getElementById('sl-offices').value;
-  document.getElementById('lbl-seats').textContent=seats;
-  document.getElementById('lbl-servers').textContent=servers;
-  document.getElementById('lbl-offices').textContent=offices;
-
-  const base=Math.max(12000,seats*800+(offices-1)*4000);
-  const srv=servers*1500;
-  let extra=0;
-  if(document.getElementById('cb-cctv').checked) extra+=3500;
-  if(document.getElementById('cb-skud').checked) extra+=2500;
-  if(document.getElementById('cb-wifi').checked) extra+=2000;
-  if(document.getElementById('cb-backup').checked) extra+=1500;
-  if(document.getElementById('cb-ib').checked) extra+=2000;
-  let sla=1.0,slaLabel='×1.0';
-  if(document.getElementById('sla-biz').checked){sla=1.25;slaLabel='×1.25'}
-  if(document.getElementById('sla-vip').checked){sla=1.6;slaLabel='×1.6'}
-
-  const total=Math.round(((base+srv+extra)*sla)/100)*100;
-  const staffCost=Math.max(130000,seats*1200);
-  const saving=staffCost-total;
-
-  document.getElementById('res-price').textContent=total.toLocaleString('ru-RU')+' ₽';
-  document.getElementById('res-base').textContent=base.toLocaleString('ru-RU')+' ₽';
-  document.getElementById('res-servers').textContent=srv.toLocaleString('ru-RU')+' ₽';
-  document.getElementById('res-extra').textContent=extra.toLocaleString('ru-RU')+' ₽';
-  document.getElementById('res-sla').textContent=slaLabel;
-  document.getElementById('res-saving').textContent='от '+Math.max(0,saving).toLocaleString('ru-RU')+' ₽/мес';
-}
-calcUpdate();
-
-function sendForm(){
-  const name=document.getElementById('fn').value.trim();
-  const phone=document.getElementById('fp').value.trim();
-  if(!name){alert('Пожалуйста, укажите ваше имя');return}
-  if(!phone){alert('Пожалуйста, укажите телефон');return}
-  const form=document.getElementById('cform');
-  form.style.opacity='0.4';form.style.pointerEvents='none';
-  document.getElementById('fok').style.display='block';
-  setTimeout(()=>{
-    form.style.opacity='1';form.style.pointerEvents='auto';
-    document.getElementById('fok').style.display='none';
-    ['fn','fp','fc','fm'].forEach(id=>document.getElementById(id).value='');
-    document.getElementById('fs').value='';
-  },4500);
-}
 </script>
 </body>
 </html>

@@ -281,6 +281,31 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
   .form-wrap,.calc-wrap{grid-template-columns:1fr}.f-row{grid-template-columns:1fr}
   .calc-result{position:static}
 }
+
+/* ── МОБИЛЬНЫЕ СТИЛИ ── */
+@media(max-width:768px){
+  /* Блок городов */
+  #cities > .wrap > div[style*="repeat(3,1fr)"]{
+    grid-template-columns:1fr!important;
+  }
+  /* Форма и калькулятор */
+  .form-wrap,.calc-wrap{grid-template-columns:1fr!important}
+  .f-row{grid-template-columns:1fr!important}
+  .calc-result{position:static!important}
+  /* Полоса охвата */
+  #cities .rv[style*="flex"]{flex-direction:column!important;align-items:flex-start!important}
+  /* Красный блок Батайск на мобиле */
+  #cities a[style*="background:#CC1515"]{padding:28px 20px!important}
+  /* Карточки городов */
+  #cities a[style*="padding:36px"]{padding:24px 20px!important}
+}
+@media(max-width:480px){
+  /* Hero марка IT */
+  .hero-mark{width:200px!important;height:200px!important}
+  .hero-mark-it{font-size:80px!important}
+  /* Статы 2 колонки */
+  .stats{grid-template-columns:repeat(2,1fr)!important}
+}
 </style>
 </head>
 <body>
@@ -291,7 +316,7 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
       <div class="logo-mark"><div class="logo-it">IT</div></div>
       <div class="logo-text">
         <div class="logo-name"><span>АйТи</span>Решение</div>
-        <div class="logo-sub">Аутсорсинг · Ростов-на-Дону</div>
+        <div class="logo-sub">Аутсорсинг ИТ · Батайск · Ростов-на-Дону · Аксай</div>
       </div>
     </a>
     <ul class="nav-links" id="nav-links">
@@ -314,7 +339,7 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
       <div>
         <div class="eyebrow rv"><div class="eyebrow-sq"></div><div class="eyebrow-txt">Ростовская область · 20 лет на рынке</div></div>
         <h1 class="rv">ИТ-инфраструктура<br>для бизнеса —<br><em>под ключ, в срок</em></h1>
-        <p class="hero-desc rv">Аутсорсинг, серверы, видеонаблюдение, СКУД, СКС и оптика — один подрядчик для всех задач. Вы занимаетесь бизнесом — мы остальным.</p>
+        <p class="hero-desc rv">Аутсорсинг, создание сайтов, облачные услуги, 1С, серверы, видеонаблюдение, кабельные сети, слаботочные системы, информационная безопасность, AI-агенты и искусственный интеллект, PDM, SCM, APS, MES системы и другие программные решения — один подрядчик для всех задач.</p>
         <div class="hero-btns rv">
           <a href="#contact" class="btn-red">🎯 Бесплатный аудит</a>
           <a href="#services" class="btn-out">→ Наши услуги</a>
@@ -780,17 +805,17 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
         <h2>Получите бесплатный<br><em>ИТ-аудит объекта</em></h2>
         <p class="sec-desc">Инженер приедет, оценит инфраструктуру и даст конкретные рекомендации — без обязательств и навязывания услуг.</p>
         <div class="form-contacts">
-          <a href="tel:+79044421682" class="fc">
+          <a href="tel:89044421682" class="fc">
             <div class="fc-ic">📱</div>
-            <div class="fc-txt"><span class="fc-lbl">Телефон</span><span class="fc-val">+7 (928) 000-12-34</span></div>
+            <div class="fc-txt"><span class="fc-lbl">Телефон</span><span class="fc-val">8 (904) 442-16-82</span></div>
           </a>
-          <a href="mailto:911@itreshenie.ru" class="fc">
+          <a href="/cdn-cgi/l/email-protection#675e5656270e131502140f02090e02491512" class="fc">
             <div class="fc-ic">✉️</div>
-            <div class="fc-txt"><span class="fc-lbl">Email</span><span class="fc-val">911@itreshenie.ru</span></div>
+            <div class="fc-txt"><span class="fc-lbl">Email</span><span class="fc-val"><span class="__cf_email__" data-cfemail="c5fcf4f485acb1b7a0b6ada0abaca0ebb7b0">[email&#160;protected]</span></span></div>
           </a>
           <a href="https://wa.me/79044421682" class="fc">
             <div class="fc-ic">💬</div>
-            <div class="fc-txt"><span class="fc-lbl">WhatsApp</span><span class="fc-val">+7 (904) 442-16-82</span></div>
+            <div class="fc-txt"><span class="fc-lbl">WhatsApp</span><span class="fc-val">8 (904) 442-16-82</span></div>
           </a>
           <a href="https://t.me/itreshenie" class="fc">
             <div class="fc-ic">✈️</div>
@@ -835,70 +860,69 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
 <!-- ГОРОДА -->
 <section id="cities" style="padding:72px 0;background:#F5F5F5">
   <div class="wrap">
-    <div class="rv" style="text-align:center;margin-bottom:52px">
+    <div class="rv" style="text-align:center;margin-bottom:48px">
       <div class="sec-lbl" style="justify-content:center">
         <div class="sec-lbl-sq"></div>
         <div class="sec-lbl-txt">География работы</div>
       </div>
       <h2>Работаем в <em>вашем городе</em></h2>
-      <p class="sec-desc" style="margin:0 auto;text-align:center">Выезд по Ростову-на-Дону, Батайску, Аксаю и всей Ростовской области. Удалённая поддержка без ограничений по географии.</p>
+      <p class="sec-desc" style="margin:0 auto;text-align:center">Выезд по Ростову-на-Дону, Батайску, Аксаю и всей Ростовской области. Удалённая поддержка без ограничений.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#D4D4D4;border-radius:14px;overflow:hidden;margin-bottom:28px">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#D4D4D4;border-radius:14px;overflow:hidden;margin-bottom:24px">
 
-      <a href="/rostov/" style="text-decoration:none;display:block;background:#fff;padding:36px 28px;transition:background 0.2s;position:relative;overflow:hidden" onmouseover="this.style.background='#fff5f5'" onmouseout="this.style.background='#fff'">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#CC1515;margin-bottom:14px">01 / ГЛАВНЫЙ ОФИС</div>
-        <div style="position:absolute;right:24px;top:28px;font-size:28px">🏙️</div>
-        <h3 style="font-size:20px;font-weight:800;color:#111;margin-bottom:10px">Ростов-на-Дону</h3>
-        <p style="font-size:13px;color:#888;line-height:1.75;margin-bottom:20px">Основной город присутствия. Инженер выедет в любой район в течение 2 часов. Обслуживаем предприятия с 2004 года.</p>
-        <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:22px">
-          <div style="font-size:12px;color:#888"><span style="color:#15803d;font-weight:700;margin-right:6px">✓</span>Выезд по городу за 2 часа</div>
-          <div style="font-size:12px;color:#888"><span style="color:#15803d;font-weight:700;margin-right:6px">✓</span>150+ клиентов в Ростове</div>
-          <div style="font-size:12px;color:#888"><span style="color:#15803d;font-weight:700;margin-right:6px">✓</span>Все районы и пригород</div>
-          <div style="font-size:12px;color:#888"><span style="color:#15803d;font-weight:700;margin-right:6px">✓</span>Полный спектр услуг</div>
+      <a href="/rostov/" style="text-decoration:none;display:block;background:#fff;padding:32px 24px;transition:background 0.2s;position:relative;overflow:hidden" onmouseover="this.style.background='#fff5f5'" onmouseout="this.style.background='#fff'">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#CC1515;margin-bottom:12px">01 / ГЛАВНЫЙ ОФИС</div>
+        <div style="position:absolute;right:20px;top:24px;font-size:26px">🏙️</div>
+        <h3 style="font-size:19px;font-weight:800;color:#111;margin-bottom:9px">Ростов-на-Дону</h3>
+        <p style="font-size:13px;color:#888;line-height:1.7;margin-bottom:18px">Основной город присутствия. Инженер выедет в любой район за 2 часа. Работаем с 2004 года.</p>
+        <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:20px">
+          <div style="font-size:12px;color:#888"><span style="color:#15803d;font-weight:700;margin-right:5px">✓</span>Выезд по городу за 2 часа</div>
+          <div style="font-size:12px;color:#888"><span style="color:#15803d;font-weight:700;margin-right:5px">✓</span>150+ клиентов в Ростове</div>
+          <div style="font-size:12px;color:#888"><span style="color:#15803d;font-weight:700;margin-right:5px">✓</span>Все районы и пригород</div>
+          <div style="font-size:12px;color:#888"><span style="color:#15803d;font-weight:700;margin-right:5px">✓</span>Полный спектр услуг</div>
         </div>
         <span style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#CC1515">Страница города →</span>
       </a>
 
-      <a href="/bataisk/" style="text-decoration:none;display:block;background:#CC1515;padding:36px 28px;transition:opacity 0.2s;position:relative;overflow:hidden" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:14px">02 / БАТАЙСК</div>
-        <div style="position:absolute;right:24px;top:28px;font-size:28px">🏗️</div>
-        <h3 style="font-size:20px;font-weight:800;color:#fff;margin-bottom:10px">Батайск</h3>
-        <p style="font-size:13px;color:rgba(255,255,255,0.82);line-height:1.75;margin-bottom:20px">Выезд из Ростова за 30 минут. Единственная компания с полным корпоративным ИТ-аутсорсингом в городе.</p>
-        <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:22px">
-          <div style="font-size:12px;color:rgba(255,255,255,0.78)"><span style="color:#4ade80;font-weight:700;margin-right:6px">✓</span>Выезд за 30 минут</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.78)"><span style="color:#4ade80;font-weight:700;margin-right:6px">✓</span>Конкурентов нет — мы первые</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.78)"><span style="color:#4ade80;font-weight:700;margin-right:6px">✓</span>Промзона, ТЦ, медицина</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.78)"><span style="color:#4ade80;font-weight:700;margin-right:6px">✓</span>SLA-договор</div>
+      <a href="/bataisk/" style="text-decoration:none;display:block;background:#CC1515;padding:32px 24px;transition:opacity 0.2s;position:relative;overflow:hidden" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:12px">02 / БАТАЙСК</div>
+        <div style="position:absolute;right:20px;top:24px;font-size:26px">🏗️</div>
+        <h3 style="font-size:19px;font-weight:800;color:#fff;margin-bottom:9px">Батайск</h3>
+        <p style="font-size:13px;color:rgba(255,255,255,0.82);line-height:1.7;margin-bottom:18px">Выезд из Ростова за 30 минут. Единственная компания с полным ИТ-аутсорсингом в городе.</p>
+        <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:20px">
+          <div style="font-size:12px;color:rgba(255,255,255,0.78)"><span style="color:#4ade80;font-weight:700;margin-right:5px">✓</span>Выезд за 30 минут</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.78)"><span style="color:#4ade80;font-weight:700;margin-right:5px">✓</span>Конкурентов нет — мы первые</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.78)"><span style="color:#4ade80;font-weight:700;margin-right:5px">✓</span>Промзона, ТЦ, медицина</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.78)"><span style="color:#4ade80;font-weight:700;margin-right:5px">✓</span>SLA-договор</div>
         </div>
         <span style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.9)">Страница города →</span>
       </a>
 
-      <a href="/aksai/" style="text-decoration:none;display:block;background:#fff;padding:36px 28px;transition:background 0.2s;position:relative;overflow:hidden" onmouseover="this.style.background='#fff5f5'" onmouseout="this.style.background='#fff'">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#CC1515;margin-bottom:14px">03 / АКСАЙ</div>
-        <div style="position:absolute;right:24px;top:28px;font-size:28px">🚛</div>
-        <h3 style="font-size:20px;font-weight:800;color:#111;margin-bottom:10px">Аксай</h3>
-        <p style="font-size:13px;color:#888;line-height:1.75;margin-bottom:20px">Выезд из Ростова за 20 минут. Аксайский район — логистика, торговля, производство вдоль М4.</p>
-        <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:22px">
-          <div style="font-size:12px;color:#888"><span style="color:#15803d;font-weight:700;margin-right:6px">✓</span>Выезд за 20 минут</div>
-          <div style="font-size:12px;color:#888"><span style="color:#15803d;font-weight:700;margin-right:6px">✓</span>Логистика и производство М4</div>
-          <div style="font-size:12px;color:#888"><span style="color:#15803d;font-weight:700;margin-right:6px">✓</span>Весь Аксайский район</div>
-          <div style="font-size:12px;color:#888"><span style="color:#15803d;font-weight:700;margin-right:6px">✓</span>SLA-договор</div>
+      <a href="/aksai/" style="text-decoration:none;display:block;background:#fff;padding:32px 24px;transition:background 0.2s;position:relative;overflow:hidden" onmouseover="this.style.background='#fff5f5'" onmouseout="this.style.background='#fff'">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#CC1515;margin-bottom:12px">03 / АКСАЙ</div>
+        <div style="position:absolute;right:20px;top:24px;font-size:26px">🚛</div>
+        <h3 style="font-size:19px;font-weight:800;color:#111;margin-bottom:9px">Аксай</h3>
+        <p style="font-size:13px;color:#888;line-height:1.7;margin-bottom:18px">Выезд из Ростова за 20 минут. Аксайский район — логистика, торговля, производство вдоль М4.</p>
+        <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:20px">
+          <div style="font-size:12px;color:#888"><span style="color:#15803d;font-weight:700;margin-right:5px">✓</span>Выезд за 20 минут</div>
+          <div style="font-size:12px;color:#888"><span style="color:#15803d;font-weight:700;margin-right:5px">✓</span>Логистика и производство М4</div>
+          <div style="font-size:12px;color:#888"><span style="color:#15803d;font-weight:700;margin-right:5px">✓</span>Весь Аксайский район</div>
+          <div style="font-size:12px;color:#888"><span style="color:#15803d;font-weight:700;margin-right:5px">✓</span>SLA-договор</div>
         </div>
         <span style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#CC1515">Страница города →</span>
       </a>
 
     </div>
-    <div class="rv" style="background:#fff;border:1px solid #ECECEC;border-radius:12px;padding:24px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+    <div class="rv" style="background:#fff;border:1px solid #ECECEC;border-radius:12px;padding:22px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
       <div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#CC1515;margin-bottom:7px">📍 Зона охвата</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#CC1515;margin-bottom:6px">📍 Зона охвата</div>
         <p style="font-size:14px;font-weight:700;color:#111;margin-bottom:3px">Ростов-на-Дону · Батайск · Аксай · Новочеркасск · Таганрог · вся Ростовская область</p>
-        <p style="font-size:13px;color:#888">Удалённая поддержка без ограничений. Выездное обслуживание — в течение дня по всей области.</p>
+        <p style="font-size:13px;color:#888">Удалённая поддержка без ограничений. Выездное обслуживание в течение дня.</p>
       </div>
       <a href="#contact" class="btn-red" style="white-space:nowrap;flex-shrink:0">Узнать условия →</a>
     </div>
   </div>
 </section>
-
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
@@ -907,7 +931,7 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
         <div class="logo-mark"><div class="logo-it">IT</div></div>
         <div class="logo-text">
           <div class="logo-name"><span>АйТи</span>Решение</div>
-          <div class="logo-sub">Аутсорсинг · Ростов-на-Дону</div>
+          <div class="logo-sub">Аутсорсинг ИТ · Батайск · Ростов-на-Дону · Аксай</div>
         </div>
       </a>
       <div class="foot-links">
@@ -926,20 +950,17 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
     <p class="foot-copy">© 2025 АйТиРешение · Ростов-на-Дону · itreshenie.ru · ИТ-инфраструктура и аутсорсинг для бизнеса</p>
   </div>
 </footer>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
 /* Scroll reveal */
 const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');obs.unobserve(x.target)}})},{threshold:0.06});
 document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
 ['pain-grid','svc-grid','why-grid','cases-grid','price-grid','steps'].forEach(c=>{
   document.querySelectorAll(`.${c} > *`).forEach((el,i)=>el.style.transitionDelay=(i*60)+'ms');
 });
-
-/* Nav border on scroll */
 window.addEventListener('scroll',()=>{
   document.getElementById('nav').style.borderBottomColor=window.scrollY>40?'rgba(204,21,21,0.22)':'#ECECEC';
 });
-
-/* Mobile nav */
 function toggleNav(){
   const ul=document.getElementById('nav-links');
   const open=ul.style.display==='flex';
@@ -948,16 +969,12 @@ function toggleNav(){
 document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{
   document.getElementById('nav-links').style.cssText='';
 }));
-
-/* FAQ accordion */
 function toggleFaq(el){
   const item=el.parentElement;
   const was=item.classList.contains('open');
   document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
   if(!was)item.classList.add('open');
 }
-
-/* Calculator */
 function calcUpdate(){
   const seats=+document.getElementById('sl-seats').value;
   const servers=+document.getElementById('sl-servers').value;
@@ -965,7 +982,6 @@ function calcUpdate(){
   document.getElementById('lbl-seats').textContent=seats;
   document.getElementById('lbl-servers').textContent=servers;
   document.getElementById('lbl-offices').textContent=offices;
-
   const base=Math.max(12000,seats*800+(offices-1)*4000);
   const srv=servers*1500;
   let extra=0;
@@ -977,11 +993,9 @@ function calcUpdate(){
   let sla=1.0,slaLabel='×1.0';
   if(document.getElementById('sla-biz').checked){sla=1.25;slaLabel='×1.25'}
   if(document.getElementById('sla-vip').checked){sla=1.6;slaLabel='×1.6'}
-
   const total=Math.round(((base+srv+extra)*sla)/100)*100;
   const staffCost=Math.max(130000,seats*1200);
   const saving=staffCost-total;
-
   document.getElementById('res-price').textContent=total.toLocaleString('ru-RU')+' ₽';
   document.getElementById('res-base').textContent=base.toLocaleString('ru-RU')+' ₽';
   document.getElementById('res-servers').textContent=srv.toLocaleString('ru-RU')+' ₽';
@@ -990,7 +1004,6 @@ function calcUpdate(){
   document.getElementById('res-saving').textContent='от '+Math.max(0,saving).toLocaleString('ru-RU')+' ₽/мес';
 }
 calcUpdate();
-
 function sendForm(){
   const name=document.getElementById('fn').value.trim();
   const phone=document.getElementById('fp').value.trim();
@@ -1000,12 +1013,4 @@ function sendForm(){
   form.style.opacity='0.4';form.style.pointerEvents='none';
   document.getElementById('fok').style.display='block';
   setTimeout(()=>{
-    form.style.opacity='1';form.style.pointerEvents='auto';
-    document.getElementById('fok').style.display='none';
-    ['fn','fp','fc','fm'].forEach(id=>document.getElementById(id).value='');
-    document.getElementById('fs').value='';
-  },4500);
-}
-</script>
-</body>
-</html>
+    form.style.opacity='1';form.style
