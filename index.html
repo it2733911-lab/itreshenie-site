@@ -809,9 +809,9 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
             <div class="fc-ic">📱</div>
             <div class="fc-txt"><span class="fc-lbl">Телефон</span><span class="fc-val">8 (904) 442-16-82</span></div>
           </a>
-          <a href="/cdn-cgi/l/email-protection#675e5656270e131502140f02090e02491512" class="fc">
+          <a href="mailto:911@itreshenie.ru" class="fc">
             <div class="fc-ic">✉️</div>
-            <div class="fc-txt"><span class="fc-lbl">Email</span><span class="fc-val"><span class="__cf_email__" data-cfemail="c5fcf4f485acb1b7a0b6ada0abaca0ebb7b0">[email&#160;protected]</span></span></div>
+            <div class="fc-txt"><span class="fc-lbl">Email</span><span class="fc-val">911@itreshenie.ru</span></div>
           </a>
           <a href="https://wa.me/79044421682" class="fc">
             <div class="fc-ic">💬</div>
@@ -950,17 +950,20 @@ footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px 0 24px}
     <p class="foot-copy">© 2025 АйТиРешение · Ростов-на-Дону · itreshenie.ru · ИТ-инфраструктура и аутсорсинг для бизнеса</p>
   </div>
 </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-
+<script>
 /* Scroll reveal */
 const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');obs.unobserve(x.target)}})},{threshold:0.06});
 document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
 ['pain-grid','svc-grid','why-grid','cases-grid','price-grid','steps'].forEach(c=>{
   document.querySelectorAll(`.${c} > *`).forEach((el,i)=>el.style.transitionDelay=(i*60)+'ms');
 });
+
+/* Nav border on scroll */
 window.addEventListener('scroll',()=>{
   document.getElementById('nav').style.borderBottomColor=window.scrollY>40?'rgba(204,21,21,0.22)':'#ECECEC';
 });
+
+/* Mobile nav */
 function toggleNav(){
   const ul=document.getElementById('nav-links');
   const open=ul.style.display==='flex';
@@ -969,12 +972,16 @@ function toggleNav(){
 document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{
   document.getElementById('nav-links').style.cssText='';
 }));
+
+/* FAQ */
 function toggleFaq(el){
   const item=el.parentElement;
   const was=item.classList.contains('open');
   document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
   if(!was)item.classList.add('open');
 }
+
+/* Calculator */
 function calcUpdate(){
   const seats=+document.getElementById('sl-seats').value;
   const servers=+document.getElementById('sl-servers').value;
@@ -1004,6 +1011,8 @@ function calcUpdate(){
   document.getElementById('res-saving').textContent='от '+Math.max(0,saving).toLocaleString('ru-RU')+' ₽/мес';
 }
 calcUpdate();
+
+/* Form */
 function sendForm(){
   const name=document.getElementById('fn').value.trim();
   const phone=document.getElementById('fp').value.trim();
@@ -1013,4 +1022,12 @@ function sendForm(){
   form.style.opacity='0.4';form.style.pointerEvents='none';
   document.getElementById('fok').style.display='block';
   setTimeout(()=>{
-    form.style.opacity='1';form.style
+    form.style.opacity='1';form.style.pointerEvents='auto';
+    document.getElementById('fok').style.display='none';
+    ['fn','fp','fc','fm'].forEach(id=>document.getElementById(id).value='');
+    document.getElementById('fs').value='';
+  },4500);
+}
+</script>
+</body>
+</html>
