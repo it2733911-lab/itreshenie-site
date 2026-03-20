@@ -1,6 +1,85 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<meta name="yandex-verification" content="67442fb290fbc150">
+<meta property="og:url" content="https://itreshenie.ru/">
+<meta property="og:image" content="https://itreshenie.ru/og-image.jpg">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="АйТиРешение">
+<!-- Schema.org LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "АйТиРешение",
+  "description": "ИТ-аутсорсинг и комплексное обслуживание инфраструктуры для бизнеса в Ростове-на-Дону, Батайске и Аксае",
+  "url": "https://itreshenie.ru",
+  "telephone": "+79044421682",
+  "email": "911@itreshenie.ru",
+  "foundingDate": "2004",
+  "priceRange": "от 12 000 ₽/мес",
+  "image": "https://itreshenie.ru/og-image.jpg",
+  "logo": "https://itreshenie.ru/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ростов-на-Дону",
+    "addressRegion": "Ростовская область",
+    "addressCountry": "RU"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 47.2357,
+    "longitude": 39.7015
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Ростов-на-Дону"},
+    {"@type": "City", "name": "Батайск"},
+    {"@type": "City", "name": "Аксай"},
+    {"@type": "AdministrativeArea", "name": "Ростовская область"}
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+79044421682",
+    "contactType": "customer service",
+    "availableLanguage": "Russian",
+    "contactOption": "TollFree"
+  },
+  "sameAs": [
+    "https://t.me/itreshenie"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Услуги ИТ-аутсорсинга",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ИТ-аутсорсинг инфраструктуры"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Серверы и системы хранения данных"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Видеонаблюдение"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "СКУД и контроль доступа"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "СКС и структурированные сети"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Оптоволокно и беспроводные сети"}}
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "47",
+    "bestRating": "5"
+  }
+}
+</script>
+<!-- /Schema.org -->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+    ym(49037582, 'init', {webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/49037582" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>АйТиРешение — ИТ-аутсорсинг и инфраструктура | Ростов-на-Дону</title>
@@ -958,7 +1037,7 @@ document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
   document.querySelectorAll(`.${c} > *`).forEach((el,i)=>el.style.transitionDelay=(i*60)+'ms');
 });
 
-/* Nav border on scroll */
+/* Nav border */
 window.addEventListener('scroll',()=>{
   document.getElementById('nav').style.borderBottomColor=window.scrollY>40?'rgba(204,21,21,0.22)':'#ECECEC';
 });
@@ -1012,7 +1091,7 @@ function calcUpdate(){
 }
 calcUpdate();
 
-/* Form */
+/* Form — Formspree */
 function sendForm(){
   const name=document.getElementById('fn').value.trim();
   const phone=document.getElementById('fp').value.trim();
@@ -1039,16 +1118,7 @@ function sendForm(){
         ['fn','fp','fc','fm'].forEach(id=>document.getElementById(id).value='');
         document.getElementById('fs').value='';
       },4500);
-    } else {
-      form.style.opacity='1';form.style.pointerEvents='auto';
-      alert('Ошибка отправки. Позвоните: +7 (904) 442-16-82');
     }
-  })
-  .catch(()=>{
-    form.style.opacity='1';form.style.pointerEvents='auto';
-    alert('Ошибка соединения. Позвоните: +7 (904) 442-16-82');
-  });
-}
 </script>
 </body>
 </html>
