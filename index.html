@@ -1020,13 +1020,34 @@ function sendForm(){
   if(!phone){alert('Пожалуйста, укажите телефон');return}
   const form=document.getElementById('cform');
   form.style.opacity='0.4';form.style.pointerEvents='none';
-  document.getElementById('fok').style.display='block';
-  setTimeout(()=>{
+  fetch('https://formspree.io/f/mkoqkndo',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({
+      name,phone,
+      company:document.getElementById('fc').value,
+      service:document.getElementById('fs').value,
+      message:document.getElementById('fm').value
+    })
+  })
+  .then(r=>{
+    if(r.ok){
+      document.getElementById('fok').style.display='block';
+      setTimeout(()=>{
+        form.style.opacity='1';form.style.pointerEvents='auto';
+        document.getElementById('fok').style.display='none';
+        ['fn','fp','fc','fm'].forEach(id=>document.getElementById(id).value='');
+        document.getElementById('fs').value='';
+      },4500);
+    } else {
+      form.style.opacity='1';form.style.pointerEvents='auto';
+      alert('Ошибка отправки. Позвоните: +7 (904) 442-16-82');
+    }
+  })
+  .catch(()=>{
     form.style.opacity='1';form.style.pointerEvents='auto';
-    document.getElementById('fok').style.display='none';
-    ['fn','fp','fc','fm'].forEach(id=>document.getElementById(id).value='');
-    document.getElementById('fs').value='';
-  },4500);
+    alert('Ошибка соединения. Позвоните: +7 (904) 442-16-82');
+  });
 }
 </script>
 </body>
