@@ -1090,8 +1090,7 @@ function calcUpdate(){
   document.getElementById('res-saving').textContent='от '+Math.max(0,saving).toLocaleString('ru-RU')+' ₽/мес';
 }
 calcUpdate();
-
-/* Form — Formspree */
+/* Form — Formspree mkoqkndo */
 function sendForm(){
   const name=document.getElementById('fn').value.trim();
   const phone=document.getElementById('fp').value.trim();
@@ -1118,7 +1117,16 @@ function sendForm(){
         ['fn','fp','fc','fm'].forEach(id=>document.getElementById(id).value='');
         document.getElementById('fs').value='';
       },4500);
+    } else {
+      form.style.opacity='1';form.style.pointerEvents='auto';
+      alert('Ошибка отправки. Позвоните: +7 (904) 442-16-82');
     }
+  })
+  .catch(()=>{
+    form.style.opacity='1';form.style.pointerEvents='auto';
+    alert('Ошибка соединения. Позвоните: +7 (904) 442-16-82');
+  });
+}
 </script>
 </body>
 </html>
